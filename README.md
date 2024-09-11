@@ -2,8 +2,7 @@
 
 npm install react-router-dom@6
 npm install antd
-npm install mdb-react-ui-kit
-
+npm install -D tailwindcss@latest postcss@latest autoprefixer@latest
 
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
