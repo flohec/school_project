@@ -4,6 +4,7 @@ npm install react-router-dom@6
 npm install antd
 npm install -D tailwindcss@latest postcss@latest autoprefixer@latest
 npm install react-slick slick-carousel
+npm install swiper
 
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
