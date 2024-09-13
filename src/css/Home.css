@@ -1,0 +1,9 @@
+.content {
+  width: 100%; /* Sicherstellt, dass der Container die gesamte Breite einnimmt */
+  display: flex; /* Verwendet Flexbox, um den Inhalt korrekt zu platzieren */
+  justify-content: center; /* Zentriert den Inhalt horizontal */
+  align-items: center; /* Zentriert den Inhalt vertikal */
+  padding: 20px; /* Optional: Padding, falls benötigt */
+  overflow: hidden; /* Verhindert, dass überflüssiger Inhalt angezeigt wird */
+  margin-top: 5%;
+}

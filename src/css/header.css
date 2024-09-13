@@ -1,0 +1,99 @@
+/* header.css */
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px; /* Padding auf der linken und rechten Seite */
+  background: #001529;
+  width: 100%;
+  height: 128px; /* Höhe des Headers */
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  box-sizing: border-box;
+}
+
+.logo {
+  color: white;
+  font-size: 48px;
+  font-weight: bold;
+  line-height: 128px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.search-bar {
+  flex-grow: 1;
+  max-width: 600px;
+  height: 48px;
+  margin: 0 20px;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 20px; /* Abstand zwischen den Elementen in der rechten Ecke */
+}
+
+.header-right .ant-btn {
+  height: 48px;
+  font-size: 18px;
+  padding: 0 20px;
+}
+
+.cart-icon {
+  font-size: 48px;
+  color: white;
+  margin-left: 10px;
+  margin-right: 20px; /* Abstand vom rechten Rand */
+}
+
+.float-button-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  background: #001529;
+  border-radius: 8px;
+  padding: 10px;
+}
+
+.float-button-container .anticon {
+  font-size: 24px;
+  color: white;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.float-button-container .anticon:hover {
+  color: #1890ff;
+}
+
+@media (max-width: 768px) {
+  .search-bar {
+    display: none;
+  }
+
+  .header-right .ant-btn {
+    margin-right: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo {
+    font-size: 36px;
+    max-width: 100px;
+  }
+
+  .header-right .ant-btn {
+    font-size: 16px;
+    margin-right: 5px;
+  }
+
+  .cart-icon {
+    font-size: 36px;
+  }
+}

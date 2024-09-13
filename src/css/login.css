@@ -1,0 +1,94 @@
+/* Login.css */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(
+    to right,
+    #ffffff,
+    #f5f5dc
+  ); /* White to beige gradient */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.login-box {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.login-box h2 {
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.input-group {
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center the input field */
+}
+
+.input-group label {
+  align-self: flex-start; /* Align labels to the left */
+  margin-bottom: 0.5rem;
+  color: #555;
+  width: 100%; /* Ensure label takes up the full width of the container */
+}
+
+.input-group input {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box; /* Ensure padding and border are included in the element’s total width and height */
+}
+
+.login-btn {
+  width: 100%;
+  padding: 0.8rem;
+  background: #00bfae;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  box-sizing: border-box; /* Ensure padding and border are included in the element’s total width and height */
+}
+
+.login-btn:hover {
+  background: #009688;
+}
+
+.forgot-password,
+.register {
+  margin-top: 1rem;
+}
+
+.forgot-password a,
+.register a {
+  color: #00bfae;
+  text-decoration: none;
+}
+
+.forgot-password a:hover,
+.register a:hover {
+  text-decoration: underline;
+}

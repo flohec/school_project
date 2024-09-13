@@ -1,0 +1,27 @@
+.card-container {
+  display: flex;
+  overflow-x: auto; /* Ermöglicht horizontales Scrollen */
+  white-space: nowrap; /* Verhindert Umbrüche, damit die Karten in einer Zeile bleiben */
+  gap: 16px; /* Abstand zwischen den Karten */
+  padding: 16px;
+  scroll-behavior: smooth; /* Für sanftes Scrollen */
+}
+
+.card-container::-webkit-scrollbar {
+  height: 8px; /* Höhe des horizontalen Scrollbalkens */
+}
+
+.card-container::-webkit-scrollbar-thumb {
+  background-color: #888; /* Farbe des Scrollbalkens */
+  border-radius: 10px;
+}
+
+.card-container::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Hover-Effekt für den Scrollbalken */
+}
+
+.product-card {
+  flex: 0 0 300px; /* Setzt die Breite der Karten */
+  height: auto;
+  white-space: normal; /* Stellt sicher, dass Textumbruch innerhalb der Karte erlaubt ist */
+}
