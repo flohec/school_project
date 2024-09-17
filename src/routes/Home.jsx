@@ -33,27 +33,21 @@ const cards = [
     price: 100,
     reducedPrice: 90,
   },
-  {
-    image: "/images/nokia-1g.webp",
-    title: "Nokia 1G",
-    price: 100,
-    reducedPrice: 90,
-  },
-  {
-    image: "/images/nokia-1g.webp",
-    title: "Nokia 1G",
-    price: 100,
-    reducedPrice: 90,
-  },
 ];
 
-function Home() {
-  console.log("Home");
+function Home({ sCount, cCount }) {
   return (
     <div>
-      <Header />
+      <Header sCount={sCount} cCount={cCount} />
       <div className="content">
-        <CardContainer data={cards} />
+        <CardContainer
+          data={cards}
+          title="Smartphones"
+          sCount={sCount}
+          cCount={cCount}
+        />
+        <CardContainer data={cards} title="PCs" />
+        <CardContainer data={cards} title="Notebooks" />
       </div>
     </div>
   );

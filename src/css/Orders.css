@@ -1,0 +1,73 @@
+/* Ensure the main content area takes full height */
+.orders-content {
+  margin-top: 0%;
+  display: flex;
+  align-items: flex-start;
+  min-width: 1000px !important;
+  min-height: 100px;
+  justify-content: space-between; /* Space between the boxes and the timeline */
+  padding: 20px; /* Add some padding around the content */
+}
+
+/* Stack OrderBox components vertically */
+.order-boxes {
+  display: flex;
+  flex-direction: column;
+  width: 25%; /* Adjust width as needed */
+  gap: 20px; /* Space between boxes */
+}
+
+/* Style for OrderContainer */
+.order-container {
+  flex: 1; /* Take up the remaining space */
+}
+
+.order-boxes {
+  display: flex;
+  margin-left: -35%;
+}
+
+/* Optional: Additional styling for OrderBox and OrderContainer */
+.order-box {
+  border: 1px solid #ddd; /* Border around each OrderBox */
+  padding: 15px;
+  border-radius: 4px; /* Rounded corners */
+  background: #fff; /* Background color */
+  width: 500px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.order-box-active {
+  border: 4px solid #4caf50;
+  padding: 15px;
+  border-radius: 4px; /* Rounded corners */
+  background: #fff; /* Background color */
+  width: 500px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.order-box.selected {
+  background-color: #d3f9d8; /* Light green for selected state */
+  border-color: #4caf50; /* Darker green border for selected state */
+  font-weight: bold;
+}
+
+.order-number {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.order-text {
+  margin-top: 15%;
+  font-size: 40px;
+  margin-left: -30%;
+  text-align: left;
+}

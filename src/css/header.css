@@ -24,11 +24,23 @@
   text-overflow: ellipsis;
 }
 
+.menu-button {
+  font-size: 24px; /* Adjust size if needed */
+  margin-right: 16px; /* Space between menu button and logo */
+  color: white;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+}
+
 .search-bar {
   flex-grow: 1;
   max-width: 600px;
-  height: 48px;
   margin: 0 20px;
+  width: 400px;
+  height: 80px;
 }
 
 .header-right {

@@ -5,5 +5,11 @@
   align-items: center; /* Zentriert den Inhalt vertikal */
   padding: 20px; /* Optional: Padding, falls benötigt */
   overflow: hidden; /* Verhindert, dass überflüssiger Inhalt angezeigt wird */
-  margin-top: 5%;
+}
+.content {
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  gap: 20px; /* Space between card containers */
+  padding: 20px; /* Optional padding for additional spacing */
+  margin-top: 75%;
 }
