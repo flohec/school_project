@@ -1,6 +1,5 @@
 import { Timeline } from "antd";
 import "../../css/OrderContainer.css";
-import { SmileOutlined } from "@ant-design/icons";
 
 function OrderContainer({ data = [] }) {
   return (

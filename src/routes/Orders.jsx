@@ -30,30 +30,30 @@ function Orders({ sCount, cCount }) {
   const orderTimeline1 = [
     {
       color: "green",
-      text: "Created the order - 01-07-2024 9:56",
+      text: "Created the order - 01.07.2024 9:56",
     },
     {
       color: "green",
-      text: "The order has been successfully received by us - 01-07-2024 9:59",
+      text: "The order has been successfully received by us - 01.07.2024 09:59",
     },
     {
       color: "green",
-      text: "Your package has been handed over to DHL - 01-07-2024 17:34",
+      text: "Your package has been handed over to DHL - 01.07.2024 17:34",
     },
     {
       color: "green",
-      text: "Your package will arrive in the next 30 minutes - 02-07-2024 9:56",
+      text: "Your package will arrive in the next 30 minutes - 02.07.2024 9:56",
     },
     {
       color: "green",
-      text: "The order was delivered to your location - 02-07-2024 10:12",
+      text: "The order was delivered to your location - 02.07.2024 10:12",
     },
   ];
 
   const orderTimeline2 = [
     {
       color: "green",
-      text: "Created the order - 10-07-2024 19:12",
+      text: "Created the order - 10.07.2024 19:12",
     },
     {
       color: "green",
@@ -99,15 +99,15 @@ function Orders({ sCount, cCount }) {
   const orderTimeline4 = [
     {
       color: "green",
-      text: "Created the order - 08-09-2024 15:06",
+      text: "Created the order - 08.09.2024 15:06",
     },
     {
       color: "green",
-      text: "The order has been successfully received by us - 08-09-2024 15:16",
+      text: "The order has been successfully received by us - 08.09.2024 15:27",
     },
     {
       color: "green",
-      text: "Your package has been handed over to DHL - 09-09-2024 9:01",
+      text: "Your package has been handed over to DHL - 09.09.2024 09:01",
     },
     {
       color: "grey",
@@ -119,22 +119,8 @@ function Orders({ sCount, cCount }) {
     },
   ];
 
-  const items1 = [
-    {
-      name: "Iphone 15",
-      image: "Created the order - 01-09-2015 9:56",
-    },
-  ];
-
   const timelines = {
     "SE-45678": orderTimeline1,
-    "SE-45679": orderTimeline2,
-    "SE-45680": orderTimeline3,
-    "SE-45681": orderTimeline4,
-  };
-
-  const items = {
-    "SE-45678": items1,
     "SE-45679": orderTimeline2,
     "SE-45680": orderTimeline3,
     "SE-45681": orderTimeline4,
@@ -152,32 +138,33 @@ function Orders({ sCount, cCount }) {
   return (
     <div>
       <Header sCount={sCount} cCount={cCount} />
-      <p className="order-text">My Orders</p>
-      <div className="orders-content">
-        <div className="order-boxes">
-          <OrderBox
-            data={order1}
-            onClick={handleOrderClick}
-            isSelected={selectedOrderNumber === order1.orderNumber}
-          />
-          <OrderBox
-            data={order2}
-            onClick={handleOrderClick}
-            isSelected={selectedOrderNumber === order2.orderNumber}
-          />
-          <OrderBox
-            data={order3}
-            onClick={handleOrderClick}
-            isSelected={selectedOrderNumber === order3.orderNumber}
-          />
-          <OrderBox
-            data={order4}
-            onClick={handleOrderClick}
-            isSelected={selectedOrderNumber === order4.orderNumber}
-          />
+      <div className="order-container-box">
+        <p className="order-text">My Orders</p>
+        <div className="orders-content">
+          <div className="order-boxes">
+            <OrderBox
+              data={order1}
+              onClick={handleOrderClick}
+              isSelected={selectedOrderNumber === order1.orderNumber}
+            />
+            <OrderBox
+              data={order2}
+              onClick={handleOrderClick}
+              isSelected={selectedOrderNumber === order2.orderNumber}
+            />
+            <OrderBox
+              data={order3}
+              onClick={handleOrderClick}
+              isSelected={selectedOrderNumber === order3.orderNumber}
+            />
+            <OrderBox
+              data={order4}
+              onClick={handleOrderClick}
+              isSelected={selectedOrderNumber === order4.orderNumber}
+            />
+          </div>
+          <OrderContainer data={activeOrder} />
         </div>
-        <OrderItemContainer />
-        <OrderContainer data={activeOrder} />
       </div>
     </div>
   );

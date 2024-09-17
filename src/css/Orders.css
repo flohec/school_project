@@ -1,6 +1,6 @@
 /* Ensure the main content area takes full height */
 .orders-content {
-  margin-top: 0%;
+  margin-top: -4%;
   display: flex;
   align-items: flex-start;
   min-width: 1000px !important;
@@ -24,7 +24,7 @@
 
 .order-boxes {
   display: flex;
-  margin-left: -35%;
+  margin-left: -5%;
 }
 
 /* Optional: Additional styling for OrderBox and OrderContainer */
@@ -68,6 +68,6 @@
 .order-text {
   margin-top: 15%;
   font-size: 40px;
-  margin-left: -30%;
+  margin-left: -1%;
   text-align: left;
 }
