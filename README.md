@@ -7,6 +7,10 @@ npm install react-slick slick-carousel
 npm install swiper
 
 
+1)git installieren: 
+2) git clone https://github.com/flohec/school_project.git in deinem pfad
+
+
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
 Currently, two official plugins are available:
