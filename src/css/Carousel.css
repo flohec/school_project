@@ -1,0 +1,10 @@
+.carousel-item {
+  background-color: #364d79;
+  color: #fff;
+  line-height: 160px;
+  text-align: center;
+  height: 200px; /* Set a fixed height */
+  border-radius: 4px;
+  overflow: hidden;
+  display: block !important;
+}
