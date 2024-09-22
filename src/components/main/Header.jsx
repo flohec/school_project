@@ -71,6 +71,10 @@ function AppHeader({ sCount, cCount }) {
     window.location.href = "/home";
   };
 
+  const handleShopClick = () => {
+    window.location.href = "/shop";
+  };
+
   return (
     <Header className="app-header">
       <div className="header-left">
@@ -105,6 +109,7 @@ function AppHeader({ sCount, cCount }) {
             size={75}
             icon={<ShoppingCartOutlined />}
             className="cart-icon hoverable"
+            onClick={handleShopClick}
           />
         </Badge>
       </div>

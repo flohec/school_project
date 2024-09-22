@@ -18,8 +18,8 @@ const cards = [
   {
     image: "/images/samsung-s23.jpeg",
     title: "Samsung S23",
-    price: 100,
-    reducedPrice: 90,
+    price: 999,
+    reducedPrice: 899,
   },
   {
     image: "/images/pixel-9.webp",

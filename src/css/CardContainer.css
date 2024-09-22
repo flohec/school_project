@@ -1,5 +1,5 @@
 .card-container {
-  width: 100vw; /* Full viewport width */
+  width: auto; /* Full viewport width */
   max-width: 100%; /* Ensure it doesn't exceed parent width */
   margin: 0; /* Remove default margin */
   padding: 20px; /* Add padding for content spacing */
@@ -21,24 +21,28 @@
 
 .card-list {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap; /* Prevent wrapping */
   gap: 20px; /* Space between cards */
-  justify-content: center;
+  justify-content: space-between;
+  overflow-x: hidden; /* Disable horizontal overflow */
+  padding: 0 10px; /* Add padding inside the container */
 }
 
 .card-item {
-  flex: 1 1 300px; /* Responsive flex basis */
+  flex: 1 1 19%; /* Make each card take 19% of the container width */
+  max-width: 19%; /* Limit the width of each card */
+  box-sizing: border-box; /* Include padding and border in width calculation */
 }
 
-.pagination {
+.pagination-container {
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   margin-top: 20px;
 }
 
-.pagination-container button {
-  padding: 10px 15px;
+.pagination-button {
+  padding: 10px;
   border: none;
   background-color: #007bff;
   color: white;
@@ -46,19 +50,7 @@
   border-radius: 5px;
 }
 
-.pagination-container button:disabled {
+.pagination-button:disabled {
   background-color: #cccccc;
   cursor: not-allowed;
-}
-
-.pagination-container {
-  display: flex;
-  align-items: center; /* Center the buttons and cards vertically */
-  margin-top: 20px;
-  padding: 1%;
-}
-
-.pagination-button {
-  margin-left: 2%;
-  margin-right: 2%;
 }

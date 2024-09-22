@@ -1,0 +1,164 @@
+/* Shopping Cart Container */
+.content-test {
+  margin-top: 12%;
+}
+
+.shopping-cart {
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+/* Tabs on top */
+.tab-container1 {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  gap: 20px;
+}
+
+.tab-container2 {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  gap: 20px;
+  margin-top: 6px;
+}
+
+.tab-container3 {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  gap: 20px;
+  margin-top: 6px;
+}
+
+.tab-wrapper {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.tab-title {
+  margin-left: 10px;
+  font-size: 16px;
+  color: #666;
+  transition: color 0.3s ease;
+}
+
+.tab-circle {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #ccc;
+  transition: background-color 0.3s ease;
+}
+
+.tab-wrapper.active-tab .tab-title {
+  color: #007bff;
+}
+
+.tab-circle.active {
+  background-color: #007bff;
+}
+
+/* Cart Items */
+.cart-items {
+  min-width: 1000px !important;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Item Image */
+.item-image {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  margin-right: 20px;
+}
+
+/* Item Name */
+.item-name {
+  flex: 2;
+  font-weight: bold;
+
+  font-size: 24px;
+  margin-right: 20px;
+}
+
+/* Quantity Input */
+.ant-input-number {
+  margin-left: 250px;
+  margin-right: 100px;
+  width: 70px;
+}
+
+/* Price */
+.item-price {
+  font-weight: bold;
+  font-size: 20px;
+  color: #333;
+  margin-right: 100px;
+}
+
+/* Delete Icon */
+.delete-icon {
+  font-size: 25px;
+  color: red;
+  cursor: pointer;
+}
+
+.step-buttons-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.step-buttons-container .ant-btn {
+  font-size: 16px;
+  padding: 10px 20px;
+}
+
+.billing-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-row {
+  margin-bottom: 15px; /* Space between rows */
+}
+
+.input-row span {
+  display: block; /* Ensure the label is block-level */
+  margin-bottom: 5px; /* Space between label and input */
+}
+
+.input-row input,
+.input-row .ant-select {
+  width: 100%; /* Full width for inputs */
+}
+/* Inputs */
+.ant-input {
+  width: 100%;
+}
+
+.order-summary {
+  margin: 0 auto; /* Center the summary */
+  padding: 20px; /* Add padding */
+}
+
+.ant-card {
+  border-radius: 8px; /* Optional: round corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: add shadow */
+}
