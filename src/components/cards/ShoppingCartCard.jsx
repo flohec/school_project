@@ -7,6 +7,7 @@ import {
   Card,
   Popconfirm,
   notification,
+  message,
 } from "antd";
 import { DeleteOutlined } from "@ant-design/icons";
 import "../../css/ShoppingCartCard.css";
@@ -40,12 +41,16 @@ const items = [
 ];
 
 function ShoppingCartCard() {
+  const [errors, setErrors] = useState({});
   const [activeTab, setActiveTab] = useState(1);
   const [cartItems, setCartItems] = useState(items);
   const [billingInfo, setBillingInfo] = useState({
+    firstName: "",
     name: "",
     email: "",
-    address: "",
+    street: "",
+    country: "",
+    phone: "",
     city: "",
     zip: "",
   });
@@ -78,6 +83,7 @@ function ShoppingCartCard() {
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setBillingInfo((prevInfo) => ({ ...prevInfo, [name]: value }));
+    console.log(billingInfo);
   };
 
   const handleTabClick = (tabIndex) => {
@@ -106,6 +112,25 @@ function ShoppingCartCard() {
   };
 
   const handleNextStep = () => {
+    if (activeTab === 2) {
+      const newErrors = {};
+      if (!billingInfo.firstName)
+        newErrors.firstName = "First Name is required.";
+      if (!billingInfo.name) newErrors.name = "Last Name is required.";
+      if (!billingInfo.email) newErrors.email = "Email Address is required.";
+      if (!billingInfo.street) newErrors.street = "Email Address is required.";
+      if (!billingInfo.city) newErrors.city = "Email Address is required.";
+      if (!billingInfo.zip) newErrors.zip = "Email Address is required.";
+      if (!billingInfo.country)
+        newErrors.country = "Email Address is required.";
+
+      setErrors(newErrors);
+
+      if (Object.keys(newErrors).length > 0) {
+        message.error("Please fill in the required fields.");
+        return;
+      }
+    }
     if (activeTab < 3) {
       setActiveTab(activeTab + 1);
     }
@@ -123,6 +148,9 @@ function ShoppingCartCard() {
       description: "Your order has been successfully placed!",
       placement: "topRight", // You can change the position
     });
+    setTimeout(() => {
+      window.location.href = "/home";
+    }, 1500);
   };
 
   const handleCompleteShop = () => {};
@@ -179,33 +207,36 @@ function ShoppingCartCard() {
             <h3>Billing Information</h3>
 
             <div className="input-row">
-              <span>First Name</span>
+              <span>First Name *</span>
               <Input
                 placeholder="First Name"
                 name="firstName"
                 value={billingInfo.firstName}
                 onChange={handleInputChange}
+                status={errors.firstName ? "error" : ""}
               />
             </div>
 
             <div className="input-row">
-              <span>Last Name</span>
+              <span>Name *</span>
               <Input
-                placeholder="Last Name"
-                name="lastName"
-                value={billingInfo.lastName}
+                placeholder="Name"
+                name="name"
+                value={billingInfo.name}
                 onChange={handleInputChange}
+                status={errors.name ? "error" : ""}
               />
             </div>
 
             <div className="input-row">
-              <span>Email Address</span>
+              <span>Email Address *</span>
               <Input
                 type="email"
                 placeholder="Email Address"
                 name="email"
                 value={billingInfo.email}
                 onChange={handleInputChange}
+                status={errors.email ? "error" : ""}
               />
             </div>
 
@@ -220,49 +251,52 @@ function ShoppingCartCard() {
             </div>
 
             <div className="input-row">
-              <span>Street Address</span>
+              <span>Street Address *</span>
               <Input
                 placeholder="Street Address"
                 name="street"
                 value={billingInfo.street}
                 onChange={handleInputChange}
+                status={errors.street ? "error" : ""}
               />
             </div>
 
             <div className="input-row">
-              <span>Country</span>
+              <span>Country *</span>
               <Select
-                placeholder="Select Country"
+                placeholder="Select a Country"
                 name="country"
                 value={billingInfo.country}
                 onChange={(value) =>
                   handleInputChange({ target: { name: "country", value } })
                 }
+                status={errors.country ? "error" : ""}
               >
                 <Select.Option value="us">United States</Select.Option>
                 <Select.Option value="de">Germany</Select.Option>
                 <Select.Option value="fr">France</Select.Option>
-                {/* Add more countries as needed */}
               </Select>
             </div>
 
             <div className="input-row">
-              <span>City</span>
+              <span>City *</span>
               <Input
                 placeholder="City"
                 name="city"
                 value={billingInfo.city}
                 onChange={handleInputChange}
+                status={errors.city ? "error" : ""}
               />
             </div>
 
             <div className="input-row">
-              <span>ZIP Code</span>
+              <span>ZIP Code *</span>
               <Input
                 placeholder="ZIP Code"
                 name="zip"
                 value={billingInfo.zip}
                 onChange={handleInputChange}
+                status={errors.zip ? "error" : ""}
               />
             </div>
           </div>
@@ -270,7 +304,6 @@ function ShoppingCartCard() {
 
         {activeTab === 3 && (
           <div className="order-summary">
-            {/* Delivery Address Card */}
             <Card title="Delivery Address" style={{ marginBottom: "20px" }}>
               <p>{billingInfo.name}</p>
               <p>{billingInfo.address}</p>
@@ -279,13 +312,11 @@ function ShoppingCartCard() {
               </p>
             </Card>
 
-            {/* Payment Method Card */}
             <Card title="Payment Method" style={{ marginBottom: "20px" }}>
               <p>Method: {paymentMethod.method}</p>
               <p>Card Number: {paymentMethod.cardNumber}</p>
             </Card>
 
-            {/* Total Costs Card */}
             <Card title="Order Summary">
               <p>Total Costs: {totalCosts.total}</p>
               <p>{totalCosts.deliveryDate}</p>
