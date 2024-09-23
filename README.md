@@ -9,7 +9,8 @@ npm install swiper
 
 1)git installieren und nodejs installieren
 2) git clone https://github.com/flohec/school_project.git in deinem pfad
-3) npm install
+3) npm install im projekt
+4) npm run dev zum starten des lokalen servers
 
 
 
