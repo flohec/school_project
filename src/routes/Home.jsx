@@ -1,6 +1,7 @@
 import CardContainer from "../components/cards/CardContainer";
 import Header from "../components/main/Header";
 import "../css/Home.css";
+import { RightOutlined, LeftOutlined } from "@ant-design/icons";
 
 const cards = [
   {
@@ -193,9 +194,21 @@ const cards3 = [
 
 function Home({ sCount, cCount }) {
   return (
-    <div>
+    <div className="content">
       <Header sCount={sCount} cCount={cCount} />
-      <div className="content">
+      <div className="header-sub-row"></div>
+      <div className="bpc-carroussel">
+        <div className="bpc-carroussel-image">
+          <button className="bpc-carroussel-button left">
+            <LeftOutlined />
+          </button>
+          <button className="bpc-carroussel-button right">
+            <RightOutlined />
+          </button>
+        </div>
+      </div>
+
+      <div className="category-carrousels">
         <CardContainer
           data={cards}
           title="Smartphones"
@@ -214,6 +227,10 @@ function Home({ sCount, cCount }) {
           sCount={sCount}
           cCount={cCount}
         />
+      </div>
+      <div className="footer">
+        <div className="footer-imprint"></div>
+        <div className="footer-trust-seals"></div>
       </div>
     </div>
   );
