@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { message } from "antd";
 import "antd/dist/reset.css";
-import "../css/Login.css";
+import "../css/login.css";
 
 function Login() {
   const [email, setEmail] = useState("");
