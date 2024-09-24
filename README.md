@@ -1,5 +1,7 @@
 # React + Vite
 
+TODOs: IMPRESSUM, Farben, bestellseite,
+
 npm install react-router-dom@6
 npm install antd
 npm install -D tailwindcss@latest postcss@latest autoprefixer@latest
