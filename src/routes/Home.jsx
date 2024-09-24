@@ -1,4 +1,5 @@
 import CardContainer from "../components/cards/CardContainer";
+import CarouselCard from "../components/cards/Carousel";
 import Header from "../components/main/Header";
 import "../css/Home.css";
 
@@ -196,6 +197,7 @@ function Home({ sCount, cCount }) {
     <div>
       <Header sCount={sCount} cCount={cCount} />
       <div className="content">
+        <CarouselCard />
         <CardContainer
           data={cards}
           title="Smartphones"
