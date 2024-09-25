@@ -1,15 +1,82 @@
-.content {
-  width: 100%; /* Sicherstellt, dass der Container die gesamte Breite einnimmt */
-  display: flex; /* Verwendet Flexbox, um den Inhalt korrekt zu platzieren */
-  justify-content: center; /* Zentriert den Inhalt horizontal */
-  align-items: center; /* Zentriert den Inhalt vertikal */
-  padding: 20px; /* Optional: Padding, falls benötigt */
-  overflow: hidden; /* Verhindert, dass überflüssiger Inhalt angezeigt wird */
+@import url("./Theme.css");
+
+.header-sub-row{
+  background-color: var(--background-dark);
+  height: 30px;
+  width: 100%;
 }
-.content {
+
+.bpc-carroussel {
+  position: relative;
+  width: calc(100% - 300px);
+  height: 600px;
+  background-color: #f8f9fa;
+  margin-bottom: 40px;
+}
+
+.bpc-carroussel-button{
+  border-radius: 0;
+  border: none;
+  width: 150px;
+  font-size: 50px;
+  color: grey;
+}
+.bpc-carroussel-button:hover{
+  color: #007bff;
+  background: darkgrey;
+}
+
+.bpc-carroussel-button.left{
+  background: linear-gradient(to right,rgba(235,242,250,1.0),rgba(248,249,250,0.3));
+}
+
+.bpc-carroussel-button.right{
+  background: linear-gradient(to left,rgba(235,242,250,1.0),rgba(248,249,250,0.3))
+}
+
+.bpc-carroussel-image{
   display: flex;
+  justify-content: space-between;
+  background-image: url("../../public/images/acerqg27.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+}
+
+.category-carrousels {
+  display: flex;
+  gap:20px;
+  flex-direction: column;
+}
+
+.content {
+  position: absolute;
+  display: flex; /* Verwendet Flexbox, um den Inhalt korrekt zu platzieren */
+  align-items: center; /* Zentriert den Inhalt vertikal */
+  width: 100%; /* Sicherstellt, dass der Container die gesamte Breite einnimmt */
   flex-direction: column; /* Stack items vertically */
-  gap: 20px; /* Space between card containers */
-  padding: 20px; /* Optional padding for additional spacing */
-  margin-top: 75%;
+}
+
+.footer{
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+  bottom: 0;
+  width: 100%;
+  background-color: var(--background-dark);
+}
+
+.footer-imprint {
+  margin-top: 35px;
+  height: 150px;
+  width: 100%;
+  background-color: rgba(0, 21, 41, 0.85);
+}
+
+.footer-trust-seals {
+  height: 320px;
+  width: 100%;
+  background-color: var(--primary);
 }

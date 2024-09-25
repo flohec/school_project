@@ -2,6 +2,7 @@ import CardContainer from "../components/cards/CardContainer";
 import CarouselCard from "../components/cards/Carousel";
 import Header from "../components/main/Header";
 import "../css/Home.css";
+import { RightOutlined, LeftOutlined } from "@ant-design/icons";
 
 const cards = [
   {
@@ -194,28 +195,30 @@ const cards3 = [
 
 function Home({ sCount, cCount }) {
   return (
-    <div>
+    <div className="content">
       <Header sCount={sCount} cCount={cCount} />
-      <div className="content">
-        <CarouselCard />
-        <CardContainer
-          data={cards}
-          title="Smartphones"
-          sCount={sCount}
-          cCount={cCount}
-        />
-        <CardContainer
-          data={cards2}
-          title="PCs and Screens"
-          sCount={sCount}
-          cCount={cCount}
-        />
-        <CardContainer
-          data={cards3}
-          title="Notebooks"
-          sCount={sCount}
-          cCount={cCount}
-        />
+      <CarouselCard />
+      <CardContainer
+        data={cards}
+        title="Smartphones"
+        sCount={sCount}
+        cCount={cCount}
+      />
+      <CardContainer
+        data={cards2}
+        title="PCs and Screens"
+        sCount={sCount}
+        cCount={cCount}
+      />
+      <CardContainer
+        data={cards3}
+        title="Notebooks"
+        sCount={sCount}
+        cCount={cCount}
+      />
+      <div className="footer">
+        <div className="footer-imprint"></div>
+        <div className="footer-trust-seals"></div>
       </div>
     </div>
   );

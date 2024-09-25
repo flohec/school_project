@@ -5,7 +5,6 @@
   flex-direction: column; /* Stack buttons, image, and dots */
   position: relative;
   width: 100%;
-  margin-top: 30%;
 }
 
 .image-container-2 {

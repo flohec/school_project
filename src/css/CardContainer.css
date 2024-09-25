@@ -1,7 +1,7 @@
 .card-container {
+  margin-top: 3%;
   width: auto; /* Full viewport width */
   max-width: 100%; /* Ensure it doesn't exceed parent width */
-  margin: 0; /* Remove default margin */
   padding: 20px; /* Add padding for content spacing */
   background-color: #f8f9fa; /* Light background color */
   border-radius: 8px;
@@ -42,7 +42,7 @@
 }
 
 .pagination-button {
-  padding: 10px;
+  padding: 30px 15px;
   border: none;
   background-color: #007bff;
   color: white;

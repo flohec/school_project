@@ -1,18 +1,17 @@
+@import url("./Theme.css");
+
 /* Login.css */
 
 body {
   margin: 0;
   padding: 0;
-  font-family: Arial, sans-serif;
+  
   background: linear-gradient(
     to right,
-    #ffffff,
-    #f5f5dc
-  ); /* White to beige gradient */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+    var(--background-light)10%,
+    #ffffff ,
+    var(--background-light)90%
+  );
 }
 
 .login-container {

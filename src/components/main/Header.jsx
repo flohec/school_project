@@ -77,7 +77,7 @@ function AppHeader({ sCount, cCount }) {
 
   return (
     <Header className="app-header">
-      <div className="header-left">
+      <div className="header-right">
         <Button
           size="large"
           type="text"
@@ -95,7 +95,7 @@ function AppHeader({ sCount, cCount }) {
         placeholder="Search products..."
         enterButton
       />
-      <div className="header-right">
+      <div className="header-left">
         <Dropdown overlay={menu} trigger={["click"]}>
           <Avatar
             size={75}
