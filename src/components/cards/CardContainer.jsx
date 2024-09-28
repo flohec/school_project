@@ -53,6 +53,10 @@ function CardContainer({ title, data, sCount, cCount }) {
           <RightOutlined />
         </button>
       </div>
+      <div className="dot-container">
+        <span className={`dot ${currentPage === 1 ? "active" : ""}`}></span>
+        <span className={`dot ${currentPage === 2 ? "active" : ""}`}></span>
+      </div>{" "}
     </div>
   );
 }

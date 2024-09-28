@@ -54,3 +54,23 @@
   background-color: #cccccc;
   cursor: not-allowed;
 }
+
+.dot-container {
+  margin-top: 1%;
+  display: flex;
+  justify-content: center;
+}
+
+.dot {
+  margin-top: -5%;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.3);
+  margin: 0 5px;
+  transition: background-color 0.3s ease;
+}
+
+.dot.active {
+  background-color: rgba(0, 0, 0, 0.8);
+}

@@ -32,21 +32,40 @@
 }
 
 .search-bar {
-  flex-grow: 1;
   max-width: 400px;
-  margin: 0 20px;
+  margin: 20px 20px;
   width: 400px;
 }
 
-.ant-input{
+.search-bar .ant-input-group-wrapper {
+  display: flex;
+}
+
+.search-bar .ant-input-affix-wrapper {
+  flex: 1;
+}
+
+.search-bar .ant-input {
+  height: 40px;
+}
+
+.search-bar .ant-input-search-button {
+  height: 45px;
+  min-width: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ant-input {
   font-size: 18px;
 }
 
-.ant-input-search .ant-input-search-button{
+.ant-input-search .ant-input-search-button {
   height: 38px;
 }
 
-.ant-btn{
+.ant-btn {
   font-size: 18px;
 }
 
@@ -63,7 +82,80 @@
 }
 
 .cart-icon {
-  font-size: 48px;
+  background-color: orange !important;
+  color: black !important;
+  width: 50px !important;
+  height: 50px !important;
+  color: var(--background-light);
+  margin-left: 10px;
+  margin-right: 20px; /* Abstand vom rechten Rand */
+}
+
+.login-button {
+  background-color: orange !important;
+  color: black !important;
+  width: 50px !important;
+  height: 50px !important;
+  color: var(--background-light);
+  margin-left: 10px;
+  margin-right: 20px; /* Abstand vom rechten Rand */
+}
+
+.search-container {
+  position: relative;
+}
+
+.search-results {
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-height: 300px; /* Optional: Add a max height */
+  overflow-y: auto; /* Scrollable if too many results */
+  z-index: 1000;
+}
+
+.search-result-item {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #f0f0f0;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.search-result-item:hover {
+  background-color: #f5f5f5;
+}
+
+.result-image {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.result-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.result-title {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.login-button:hover {
+  color: black !important;
+}
+
+.profile-icon {
+  background-color: orange !important;
+  color: black !important;
+  width: 50px !important;
+  height: 50px !important;
   color: var(--background-light);
   margin-left: 10px;
   margin-right: 20px; /* Abstand vom rechten Rand */
