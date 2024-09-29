@@ -95,6 +95,11 @@ function AppHeader({ sCount, cCount, data = [], loginDefault = true }) {
     setIsModalVisible(false);
   };
 
+  const handleResultClick = (title) => {
+    console.log(title);
+    window.location.href = "/item/" + title;
+  };
+
   const menu = (
     <Menu>
       {login ? (
@@ -162,7 +167,11 @@ function AppHeader({ sCount, cCount, data = [], loginDefault = true }) {
         {searchResults.length > 0 && (
           <div className="search-results">
             {searchResults.map((item, index) => (
-              <div key={index} className="search-result-item">
+              <div
+                key={index}
+                className="search-result-item"
+                onClick={() => handleResultClick(item.title)}
+              >
                 <img
                   src={item.image}
                   alt={item.title}

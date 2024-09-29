@@ -1,5 +1,6 @@
 import CardContainer from "../components/cards/CardContainer";
 import CarouselCard from "../components/cards/Carousel";
+import Footer from "../components/main/Footer";
 import Header from "../components/main/Header";
 import "../css/Home.css";
 import { RightOutlined, LeftOutlined } from "@ant-design/icons";
@@ -32,10 +33,7 @@ function Home({ sCount, cCount, data }) {
         sCount={sCount}
         cCount={cCount}
       />
-      <div className="footer">
-        <div className="footer-imprint"></div>
-        <div className="footer-trust-seals"></div>
-      </div>
+      <Footer />
     </div>
   );
 }

@@ -32,7 +32,10 @@ function Card({ data, sCount, cCount }) {
         <Button
           type="primary"
           className="shopping-button"
-          onClick={handleButtonClick}
+          onClick={(e) => {
+            e.stopPropagation();
+            handleButtonClick();
+          }}
         >
           <ShoppingCartOutlined />
         </Button>
