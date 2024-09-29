@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Login from "./routes/Login";
 import Home from "./routes/Home";
+import ItemView from "./routes/ItemView";
 import Orders from "./routes/Orders";
 import MyProfile from "./routes/MyProfile";
 import Shop from "./routes/Shop";
@@ -215,6 +215,7 @@ function App() {
         <Route path="/my-profile" element={<MyProfile />} />
         <Route path="/orders" element={<Orders />} />
         <Route path="/shop" element={<Shop />} />
+        <Route path="/item/:item" element={<ItemView data={data} />} />
         <Route path="*" element={<Home />} />
       </Routes>
     </Router>

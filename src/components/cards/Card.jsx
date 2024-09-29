@@ -5,16 +5,19 @@ import { ShoppingCartOutlined } from "@ant-design/icons";
 
 function Card({ data, sCount, cCount }) {
   const handleButtonClick = () => {
-    // Update the count
     cCount((prevCount) => prevCount + 1);
 
-    // Show success message with product title
     message.success(`${data.title} added to cart!`);
+  };
+
+  const handleCardClick = () => {
+    window.location.href = "/item/" + data.title;
   };
 
   return (
     <AntCard
       hoverable
+      onClick={handleCardClick}
       className="product-card"
       cover={
         <div className="image-container">
