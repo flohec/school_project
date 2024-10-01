@@ -32,6 +32,32 @@ function App() {
           { title: "512GB", extraPrice: 150 },
           { title: "1000GB", extraPrice: 200 },
         ],
+        reviews: [
+          {
+            user: "John Doe",
+            rating: 5,
+            comment: "Excellent phone, love the new features!",
+            avatar: "/images/john-avatar.jpg",
+          },
+          {
+            user: "Jane Smith",
+            rating: 4,
+            comment: "Good phone, but a bit expensive.",
+            avatar: "/images/jane-avatar.jpg",
+          },
+          {
+            user: "Alice Johnson",
+            rating: 4.5,
+            comment: "Amazing performance and camera quality!",
+            avatar: "/images/alice-avatar.jpg",
+          },
+          {
+            user: "Mike Lee",
+            rating: 3.5,
+            comment: "Battery life could be better.",
+            avatar: "/images/mike-avatar.webp",
+          },
+        ],
         rating: 4.5, // Added rating
       },
       {

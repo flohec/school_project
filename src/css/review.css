@@ -1,0 +1,72 @@
+.reviews-header {
+  display: flex;
+  justify-content: space-between; /* This will push the button to the right */
+  align-items: center; /* Aligns both elements vertically in the center */
+  margin-bottom: 15px;
+}
+
+.reviews-title {
+  font-size: 24px;
+  margin: 0;
+}
+
+.add-review-button {
+  background-color: orange !important;
+  color: black !important;
+  border-radius: 4px;
+  padding: 5px 15px;
+  margin-left: auto; /* Ensures the button stays on the right */
+}
+
+.reviews-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.review-card {
+  display: flex;
+  gap: 15px;
+  padding: 15px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  background-color: #fff;
+}
+
+.review-avatar {
+  border-radius: 50%;
+}
+
+.review-content {
+  flex-grow: 1;
+}
+
+.review-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.review-user {
+  font-weight: bold;
+  font-size: 18px;
+  color: #333;
+}
+
+.review-rating {
+  margin-left: auto;
+}
+
+.review-comment {
+  margin-top: 8px;
+  font-size: 16px;
+  color: #555;
+}
+
+.review-input {
+  margin-bottom: 15px;
+}
+
+.review-input-rating {
+  margin-bottom: 10px;
+}

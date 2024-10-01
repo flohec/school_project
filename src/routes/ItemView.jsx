@@ -2,9 +2,10 @@ import { useParams } from "react-router-dom";
 import Header from "../components/main/Header";
 import Footer from "../components/main/Footer";
 import "../css/itemView.css";
-import { Button, Rate } from "antd";
+import { Avatar, Rate } from "antd";
 import { useState } from "react";
 import { ShoppingCartOutlined } from "@ant-design/icons";
+import ReviewCard from "../components/cards/ReviewCard";
 
 const ItemView = ({ data }) => {
   const { item } = useParams();
@@ -50,6 +51,7 @@ const ItemView = ({ data }) => {
           <div className="rating-container">
             <Rate
               allowHalf
+              disabled
               defaultValue={selectedItem.rating}
               className="star-rating"
             />
@@ -113,6 +115,7 @@ const ItemView = ({ data }) => {
           </button>
         </div>
       </div>
+      <ReviewCard />
       <Footer />
     </div>
   );
