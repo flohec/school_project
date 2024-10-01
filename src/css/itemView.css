@@ -1,49 +1,122 @@
 .item-view {
   display: flex;
-  gap: 40px;
-  max-width: 1000px;
-  margin-top: 40px;
 }
 
 .left-side {
+  margin-top: 5%;
+  width: 70%;
+  margin-left: -10%;
+}
+
+.right-side {
+  margin-top: 15%;
+  width: 30%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 60%;
 }
 
-.star-rating {
-  margin-bottom: 20px;
+.sub-image-title {
+  margin-bottom: 10px; /* Space between the title and images */
+  font-size: 18px;
+  font-weight: bold;
 }
 
-.star-rating-text {
-  margin-left: 6px;
-  margin-bottom: 1%;
+.right-side {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align all elements starting from the same vertical */
 }
 
-.item-title {
-  font-size: 24px;
-  text-align: center;
-  margin-bottom: -10%;
+.sub-images-row,
+.sub-storage-row {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start; /* Ensures vertical alignment */
 }
 
-.main-image img,
-.gallery-image {
-  width: 100%; /* Makes the image take full width of its container */
-  height: 600px; /* Set a fixed height */
-  object-fit: contain; /* Ensures the image retains its aspect ratio */
+.sub-image-container,
+.sub-storage-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid gray;
+  padding: 5px;
+  cursor: pointer;
+  width: 100px; /* Fixed width for consistent sizing */
+  height: 100px; /* Fixed height for consistent sizing */
 }
 
-/* Optionally, if you want to ensure the images in the gallery have a specific size */
-.gallery-image {
-  width: 160px; /* Set a width for gallery images */
-  height: 160px; /* Set a height for gallery images */
-  object-fit: contain; /* Ensures the images retain their aspect ratio */
-  margin-right: 10px; /* Adds some space between gallery images */
+.first-image {
+  border-color: orange; /* First image with different border color */
+}
+
+.sub-image {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+}
+
+.sub-image-container:hover {
+  border-color: orange; /* Border color on hover */
+}
+
+.sub-storage {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+}
+
+.sub-storage-container:hover {
+  border-color: orange; /* Border color on hover */
 }
 
 .rating-container {
-  display: flex;
-  align-items: center;
+  display: flex; /* Arrange items in a row */
+  align-items: center; /* Vertically center the rating and text */
+  gap: 10px; /* Add some space between the stars and text */
+}
+
+.star-rating-text {
   font-size: 14px;
+  margin-left: 8px; /* Adjust this value for proper spacing */
+}
+
+.price-row {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin: 10px 0; /* Space between the price row and the button */
+}
+
+.canceled-price {
+  text-decoration: line-through; /* Style for canceled price */
+  color: grey; /* Color for canceled price */
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.reduced-price-item {
+  color: red; /* Color for reduced price */
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.add-to-cart-button-item {
+  display: flex; /* Use flexbox to align items */
+  align-items: center; /* Center items vertically */
+  justify-content: center; /* Center content */
+  padding: 10px 15px;
+  background-color: orange; /* Green background */
+  color: black; /* White text color */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 20px;
+  width: 100%;
+  height: 9%;
+}
+.cart-icon {
+  margin-right: 8px; /* Space between icon and text */
 }

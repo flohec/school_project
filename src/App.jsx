@@ -1,4 +1,9 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Navigate,
+} from "react-router-dom";
 import Home from "./routes/Home";
 import ItemView from "./routes/ItemView";
 import Orders from "./routes/Orders";
@@ -11,10 +16,22 @@ function App() {
   const data = {
     cards: [
       {
-        image: "/images/iphone-15.webp",
+        image: "/images/iphone-15-black.avif",
         title: "Iphone 15",
-        price: 100,
-        reducedPrice: 90,
+        price: 1199,
+        reducedPrice: 1049,
+        subImages: [
+          { src: "/images/iphone-15-black.avif", title: "Black" },
+          { src: "/images/iphone-15-blue.avif", title: "Blue" },
+          { src: "/images/iphone-15-nature.avif", title: "Nature" },
+          { src: "/images/iphone-15-white.avif", title: "White" },
+        ],
+        storage: [
+          { title: "128GB", extraPrice: 0 },
+          { title: "256GB", extraPrice: 100 },
+          { title: "512GB", extraPrice: 150 },
+          { title: "1000GB", extraPrice: 200 },
+        ],
         rating: 4.5, // Added rating
       },
       {
@@ -246,7 +263,7 @@ function App() {
         <Route path="/orders" element={<Orders />} />
         <Route path="/shop" element={<Shop />} />
         <Route path="/item/:item" element={<ItemView data={data} />} />
-        <Route path="*" element={<Home />} />
+        <Route path="*" element={<Navigate to="/home" />} />
       </Routes>
     </Router>
   );
