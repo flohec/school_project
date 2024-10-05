@@ -1,39 +1,20 @@
-/* Container for the horizontal timeline */
 .horizontal-timeline-container {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow-x: auto; /* Allow horizontal scrolling if needed */
+  justify-content: center; /* Center the timeline horizontally */
+  align-items: center; /* Center the timeline vertically if needed */
+  height: 100%; /* Ensure the container takes up the full height of the card */
   padding: 20px;
-  white-space: nowrap;
-  margin-right: -10%;
 }
 
-/* Rotate the entire timeline to be horizontal */
-.horizontal-timeline {
-  display: inline-flex;
-  flex-direction: row;
+.custom-timeline {
+  width: 100%; /* Make the timeline take the full width */
+  font-size: 18px; /* Increase font size for better readability */
 }
 
-.horizontal-timeline .ant-timeline-item {
-  display: inline-block;
-  width: auto;
-  transform: rotate(90deg); /* Rotate the timeline items */
-  margin-right: 40px; /* Adjust spacing between items */
+.custom-timeline .ant-timeline-item-content {
+  font-size: 18px; /* Increase the size of the text inside each item */
 }
 
-/* Rotate the circle (dot) back to the original position */
-.horizontal-timeline .ant-timeline-item-head {
-  transform: rotate(-90deg);
-}
-
-/* Optional: Adjust content styling */
-.horizontal-timeline .ant-timeline-item-content {
-  transform: rotate(-90deg);
-  text-align: center;
-}
-
-.test {
-  margin-top: 10%;
-  font-size: 200px;
+.custom-timeline .ant-timeline-item {
+  padding-bottom: 20px; /* Space between timeline items */
 }

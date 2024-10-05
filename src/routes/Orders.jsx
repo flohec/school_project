@@ -139,31 +139,42 @@ function Orders({ sCount, cCount }) {
     <div>
       <Header sCount={sCount} cCount={cCount} />
       <div className="order-container-box">
-        <p className="order-text">My Orders</p>
         <div className="orders-content">
-          <div className="order-boxes">
-            <OrderBox
-              data={order1}
-              onClick={handleOrderClick}
-              isSelected={selectedOrderNumber === order1.orderNumber}
-            />
-            <OrderBox
-              data={order2}
-              onClick={handleOrderClick}
-              isSelected={selectedOrderNumber === order2.orderNumber}
-            />
-            <OrderBox
-              data={order3}
-              onClick={handleOrderClick}
-              isSelected={selectedOrderNumber === order3.orderNumber}
-            />
-            <OrderBox
-              data={order4}
-              onClick={handleOrderClick}
-              isSelected={selectedOrderNumber === order4.orderNumber}
-            />
+          <div className="order-card">
+            <div className="order-boxes">
+              <p className="order-text">My Orders</p>
+
+              <OrderBox
+                data={order1}
+                onClick={handleOrderClick}
+                isSelected={selectedOrderNumber === order1.orderNumber}
+              />
+              <OrderBox
+                data={order2}
+                onClick={handleOrderClick}
+                isSelected={selectedOrderNumber === order2.orderNumber}
+              />
+              <OrderBox
+                data={order3}
+                onClick={handleOrderClick}
+                isSelected={selectedOrderNumber === order3.orderNumber}
+              />
+              <OrderBox
+                data={order4}
+                onClick={handleOrderClick}
+                isSelected={selectedOrderNumber === order4.orderNumber}
+              />
+            </div>
           </div>
-          <OrderContainer data={activeOrder} />
+
+          <div className="order-container-card">
+            <OrderContainer data={activeOrder} />
+          </div>
+        </div>
+        <div className="orders-content-test">
+          <div className="order-card"></div>
+
+          <div className="order-container-card"></div>
         </div>
       </div>
     </div>
