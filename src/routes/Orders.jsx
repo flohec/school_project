@@ -2,8 +2,9 @@ import Header from "../components/main/Header";
 import "../css/Orders.css";
 import OrderContainer from "../components/order/OrderContainer";
 import OrderBox from "../components/order/OrderBox";
-import OrderItemContainer from "../components/order/OrderItemsContainer";
 import { useState } from "react";
+import Dashboard from "../components/cards/Dashboard";
+import Footer from "../components/main/Footer";
 
 function Orders({ sCount, cCount }) {
   const order1 = {
@@ -171,12 +172,9 @@ function Orders({ sCount, cCount }) {
             <OrderContainer data={activeOrder} />
           </div>
         </div>
-        <div className="orders-content-test">
-          <div className="order-card"></div>
-
-          <div className="order-container-card"></div>
-        </div>
+        <Dashboard />
       </div>
+      <Footer />
     </div>
   );
 }
