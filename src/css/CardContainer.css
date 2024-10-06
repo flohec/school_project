@@ -1,3 +1,5 @@
+
+
 .card-container {
   margin-top: 3%;
   width: auto; /* Full viewport width */
@@ -10,12 +12,11 @@
 }
 
 .card-title {
-  font-size: 24px;
+  font-size: 42;
   font-weight: bold;
   color: #333; /* Dark text color */
   margin-bottom: 20px;
-  text-align: center;
-  border-bottom: 2px solid #007bff; /* Bottom border for emphasis */
+  border-bottom: 2px solid var(--background-dark); /* Bottom border for emphasis */
   padding-bottom: 10px;
 }
 
@@ -29,6 +30,7 @@
 }
 
 .card-item {
+  margin: 20px 0;
   flex: 1 1 19%; /* Make each card take 19% of the container width */
   max-width: 19%; /* Limit the width of each card */
   box-sizing: border-box; /* Include padding and border in width calculation */
@@ -42,10 +44,11 @@
 }
 
 .pagination-button {
-  padding: 30px 15px;
+  padding: 30px 12px;
   border: none;
-  background-color: #007bff;
+  background-color: var(--primary);
   color: white;
+  font-size: 25px;
   cursor: pointer;
   border-radius: 5px;
 }

@@ -1,13 +1,14 @@
+@import url("./css/Theme.css");
+
 /* Ensure the footer sticks to the bottom */
 html,
 body {
   margin: 0;
   padding: 0;
   overflow-x: hidden; /* Verhindert horizontales Scrollen */
-}
-body {
   display: flex;
   flex-direction: column;
+  background-color: var(--background-light);
 }
 
 #root {
