@@ -143,128 +143,133 @@ function AppHeader({ sCount, cCount, data = [], loginDefault = true }) {
 
   return (
     <Header className="app-header">
-      <div className="header-right">
-        <Button
-          size="large"
-          type="text"
-          icon={<MenuOutlined />}
-          className="menu-button"
-          onClick={openDrawer}
-        />
-        <div className="logo" onClick={handleHome}>
-          FutureTech
-        </div>
-      </div>
-      <div className="search-container">
-        <Search
-          size="large"
-          className="search-bar"
-          placeholder="Search products..."
-          enterButton="Search"
-          onChange={handleSearch}
-        />
-
-        {searchResults.length > 0 && (
-          <div className="search-results">
-            {searchResults.map((item, index) => (
-              <div
-                key={index}
-                className="search-result-item"
-                onClick={() => handleResultClick(item.title)}
-              >
-                <img
-                  src={item.image}
-                  alt={item.title}
-                  className="result-image"
-                />
-                <div className="result-info">
-                  <div className="result-title">{item.title}</div>
-                </div>
-              </div>
-            ))}
-          </div>
-        )}
-      </div>
-
-      <div className="header-left">
-        {login ? (
-          <Dropdown overlay={menu} trigger={["click"]}>
-            <Avatar
-              size={75}
-              icon={<UserOutlined />}
-              className="profile-icon hoverable"
-            />
-          </Dropdown>
-        ) : (
-          <Avatar
-            size={75}
-            icon={<LoginOutlined />}
-            className="login-button hoverable"
-            onClick={handleLoginLogout}
-          >
-            Login
-          </Avatar>
-        )}
-
-        <Badge count={sCount} offset={[-10, 10]}>
-          <Avatar
-            size={75}
-            icon={<ShoppingCartOutlined />}
-            className="cart-icon hoverable"
-            onClick={handleShopClick}
+      <div className="app-header-top">
+        <div className="header-left">
+          <Button
+            size="large"
+            type="text"
+            icon={<MenuOutlined />}
+            className="menu-button"
+            onClick={openDrawer}
           />
-        </Badge>
-      </div>
+          <div className="logo" onClick={handleHome}>
+            FutureTech
+          </div>
+        </div>
 
-      <Drawer
-        title="Menu"
-        placement="left"
-        onClose={closeDrawer}
-        visible={visible}
-        className="app-drawer"
-      >
-        <p>Content goes here</p>
-      </Drawer>
+        <div className="search-container">
+          <Search
+            size="large"
+            className="search-bar"
+            placeholder="Search products..."
+            enterButton="Search"
+            onChange={handleSearch}
+          />
 
-      <Modal
-        title="Login"
-        visible={isModalVisible}
-        onOk={handleLogin}
-        onCancel={handleCancel}
-        okText="Login"
-      >
-        <Form
-          form={form}
-          layout="vertical"
-          name="login_form"
-          initialValues={{ remember: true }}
+          {searchResults.length > 0 && (
+            <div className="search-results">
+              {searchResults.map((item, index) => (
+                <div
+                  key={index}
+                  className="search-result-item"
+                  onClick={() => handleResultClick(item.title)}
+                >
+                  <img
+                    src={item.image}
+                    alt={item.title}
+                    className="result-image"
+                  />
+                  <div className="result-info">
+                    <div className="result-title">{item.title}</div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          )}
+        </div>
+
+        <div className="header-right">
+          {login ? (
+            <Dropdown overlay={menu} trigger={["click"]}>
+              <Avatar
+                size={50}
+                icon={<UserOutlined />}
+                className="profile-icon hoverable"
+              />
+            </Dropdown>
+          ) : (
+            <Avatar
+              size={50}
+              icon={<LoginOutlined />}
+              className="login-button hoverable"
+              onClick={handleLoginLogout}
+            >
+              Login
+            </Avatar>
+          )}
+
+          <Badge count={sCount} offset={[-10, 10]}>
+            <Avatar
+              size={50}
+              icon={<ShoppingCartOutlined />}
+              className="cart-icon hoverable"
+              onClick={handleShopClick}
+            />
+          </Badge>
+        </div>
+
+        <Drawer
+          title="Menu"
+          placement="left"
+          onClose={closeDrawer}
+          visible={visible}
+          className="app-drawer"
         >
-          <Form.Item
-            name="username"
-            label="Username"
-            rules={[
-              {
-                required: true,
-                message: "Please input your username!",
-              },
-            ]}
+          <p>Content goes here</p>
+        </Drawer>
+
+        <Modal
+          title="Login"
+          visible={isModalVisible}
+          onOk={handleLogin}
+          onCancel={handleCancel}
+          okText="Login"
+        >
+          <Form
+            form={form}
+            layout="vertical"
+            name="login_form"
+            initialValues={{ remember: true }}
           >
-            <Input />
-          </Form.Item>
-          <Form.Item
-            name="password"
-            label="Password"
-            rules={[
-              {
-                required: true,
-                message: "Please input your password!",
-              },
-            ]}
-          >
-            <Input.Password />
-          </Form.Item>
-        </Form>
-      </Modal>
+            <Form.Item
+              name="username"
+              label="Username"
+              rules={[
+                {
+                  required: true,
+                  message: "Please input your username!",
+                },
+              ]}
+            >
+              <Input />
+            </Form.Item>
+            <Form.Item
+              name="password"
+              label="Password"
+              rules={[
+                {
+                  required: true,
+                  message: "Please input your password!",
+                },
+              ]}
+            >
+              <Input.Password />
+            </Form.Item>
+          </Form>
+        </Modal>
+      </div>
+      <div className="app-header-bottom">
+      </div>
     </Header>
   );
 }

@@ -4,6 +4,10 @@ import { Button, message } from "antd";
 import { ShoppingCartOutlined } from "@ant-design/icons";
 
 function Card({ data, sCount, cCount }) {
+  var discount;
+  var centValue;
+  centValue = Math.round((data.reducedPrice - Math.floor(data.reducedPrice)) * 100) 
+
   const handleButtonClick = () => {
     cCount((prevCount) => prevCount + 1);
 
@@ -13,6 +17,11 @@ function Card({ data, sCount, cCount }) {
   const handleCardClick = () => {
     window.location.href = "/item/" + data.title;
   };
+
+  if (data.reducedPrice) {
+    let tempPercentage = 100 - ((data.reducedPrice / data.price) * 100);
+    discount  = Math.round(tempPercentage * 10) / 10;
+  }
 
   return (
     <AntCard
@@ -25,10 +34,16 @@ function Card({ data, sCount, cCount }) {
         </div>
       }
     >
-      <div className="card-title">{data.title}</div>
+      <div className="card-item-title">{data.title}</div>
       <div className="price-section">
-        <span className="price-old">{data.price}€</span>
-        <span className="price-new">{data.reducedPrice}€</span>
+        <div>
+          {discount > 0 && <span className="discount-percent">-{discount}%</span>}
+          <div className="price">
+            <span className="price-new">{Math.floor(data.reducedPrice)}</span>
+            <span className="price-cent">{Math.floor(centValue)}€</span>
+          </div>
+        </div>
+        <span className="price-old">{discount > 0 &&<span>{data.price}€</span>}</span>
         <Button
           type="primary"
           className="shopping-button"
@@ -37,7 +52,7 @@ function Card({ data, sCount, cCount }) {
             handleButtonClick();
           }}
         >
-          <ShoppingCartOutlined />
+          Add to Card
         </Button>
       </div>
       <div className="add-to-cart-button"></div>

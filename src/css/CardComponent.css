@@ -1,3 +1,15 @@
+.card-item-title {
+  height: 64px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 20px;
+  font-weight: bold;
+  color: #333; /* Dark text color */
+  margin-bottom: 20px;
+  border-bottom: 2px solid var(--background-dark); /* Bottom border for emphasis */
+  padding-bottom: 10px;
+}
+
 .product-card {
   width: 300px;
   padding: 10px; /* Padding for the card */
@@ -5,16 +17,13 @@
 
 .shopping-button {
   position: absolute;
-  right: 35px; /* Distance from the right edge of the card */
+  right: 25px; /* Distance from the right edge of the card */
   bottom: 25px; /* Distance from the bottom edge of the card */
-  background-color: #007bff; /* Blue background color */
-  border-color: #007bff; /* Border color to match background */
-  color: #fff; /* White text/icon color */
-  border-radius: 4px; /* Rounded corners */
-}
-
-.shopping-button .anticon {
-  color: #fff; /* White icon color */
+  background-color: var(--secondary); /* Blue background color */
+  color: var(--primary); /* White text/icon color */
+  border-radius: 15px; /* Rounded corners */
+  font-size: 14px;
+  font-weight: bold;
 }
 
 .shopping-button:hover,
@@ -49,7 +58,26 @@
   margin-right: 10px;
 }
 
-.price-new {
+.discount-percent{
+  margin-right: 5px;
   color: red;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.price-new {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.price {
+  display: inline;
+  position: relative;
+}
+
+.price-cent {
+  position: absolute;
+  bottom: 6px;
+  font-size: 14px;
   font-weight: bold;
 }
