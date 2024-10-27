@@ -81,7 +81,7 @@
 .item-image {
   width: 160px;
   height: 160px;
-  object-fit: cover;
+  object-fit: contain;
   margin-right: 20px;
 }
 
@@ -126,29 +126,45 @@
   font-size: 16px;
   padding: 10px 20px;
 }
-
 .billing-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two equal columns */
+  gap: 20px; /* Space between columns and rows */
+}
+
+.input-row {
   display: flex;
   flex-direction: column;
 }
 
-.input-row {
-  margin-bottom: 15px; /* Space between rows */
-}
-
 .input-row span {
-  display: block; /* Ensure the label is block-level */
   margin-bottom: 5px; /* Space between label and input */
+  font-weight: bold; /* Make the label stand out */
 }
 
 .input-row input,
 .input-row .ant-select {
   width: 100%; /* Full width for inputs */
+  font-size: 16px;
+  margin-top: 18px;
 }
-/* Inputs */
-.ant-input {
-  width: 100%;
+
+.input-row input {
+  padding: 10px; /* Add padding */
 }
+
+.input-row .ant-select {
+  height: 50px; /* Set the desired height */
+  line-height: 50px; /* Center the text vertically */
+  display: flex; /* Use flexbox for better alignment */
+  align-items: center; /* Center items vertically */
+}
+
+/* Make the full row input span across both columns */
+.full-row {
+  grid-column: span 2;
+}
+
 
 .order-summary {
   margin: 0 auto; /* Center the summary */
@@ -158,4 +174,38 @@
 .ant-card {
   border-radius: 8px; /* Optional: round corners */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: add shadow */
+}
+
+.first-span {
+  margin-top: -6px;
+}
+
+.last-span {
+  margin-bottom: -7px;
+}
+
+.order-summary-container {
+  display: grid;
+  grid-template-columns: 3fr 1fr; /* Left side takes 2/3, right side takes 1/3 */
+  gap: 20px; /* Space between the two columns */
+}
+
+.cart-item-2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 11px;
+}
+
+.first-span, .last-span, .normal-span {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.order-cards {
+ margin-top: 11px;
 }

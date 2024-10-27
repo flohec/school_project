@@ -64,6 +64,7 @@
 }
 
 .search-container {
+  margin-top: 1%;
   width: 400px;
   max-width: calc(100% - 300px); /* Adjust based on your layout */
 }

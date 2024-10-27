@@ -18,24 +18,25 @@ const items = [
     id: 1,
     image: "/images/applemacbook.avif",
     title: "Apple MacBook Air",
-    price: 1199,
-    reducedPrice: 1099,
+    price: 1199.99,
+    reducedPrice: 1099.99,
+    rating: 4.3, // Added rating
     quantity: 1,
   },
   {
     id: 2,
-    image: "/images/lgultragear.webp",
-    title: "LG Ultragear",
-    price: 209,
-    reducedPrice: 159,
+    image: "/images/iphone-15-black.avif",
+    title: "Iphone 15",
+    price: 1199.99,
+    reducedPrice: 1049.99,
     quantity: 1,
   },
   {
     id: 3,
-    image: "/images/samsung-s23.jpeg",
-    title: "Samsung S23",
-    price: 999,
-    reducedPrice: 899,
+    image: "/images/lgultragear.webp",
+    title: "LG Ultragear",
+    price: 209.99,
+    reducedPrice: 159.99,
     quantity: 1,
   },
 ];
@@ -70,7 +71,7 @@ function ShoppingCartCard() {
         total += quantity[i] * items[i].reducedPrice; // Use quantity array
       }
     }
-    return total; // Return the calculated total
+    return total.toFixed(2);
   };
 
   const totalCosts = {
@@ -161,6 +162,8 @@ function ShoppingCartCard() {
     { id: 3, name: "Checkout" },
   ];
 
+
+
   return (
     <div className="shopping-cart">
       {/* Top tabs */}
@@ -203,126 +206,154 @@ function ShoppingCartCard() {
             </div>
           ))}
         {activeTab === 2 && (
-          <div className="billing-form">
-            <h3>Billing Information</h3>
+            <div className="billing-form">
+              <h3>Billing Information</h3>
+              <h3></h3>
 
-            <div className="input-row">
-              <span>First Name *</span>
-              <Input
-                placeholder="First Name"
-                name="firstName"
-                value={billingInfo.firstName}
-                onChange={handleInputChange}
-                status={errors.firstName ? "error" : ""}
-              />
-            </div>
+              <div className="input-row">
+                <span>First Name *</span>
+                <Input
+                    placeholder="First Name"
+                    name="firstName"
+                    value={billingInfo.firstName}
+                    onChange={handleInputChange}
+                    status={errors.firstName ? "error" : ""}
+                />
+              </div>
 
-            <div className="input-row">
-              <span>Name *</span>
-              <Input
-                placeholder="Name"
-                name="name"
-                value={billingInfo.name}
-                onChange={handleInputChange}
-                status={errors.name ? "error" : ""}
-              />
-            </div>
+              <div className="input-row">
+                <span>Name *</span>
+                <Input
+                    placeholder="Name"
+                    name="name"
+                    value={billingInfo.name}
+                    onChange={handleInputChange}
+                    status={errors.name ? "error" : ""}
+                />
+              </div>
 
-            <div className="input-row">
-              <span>Email Address *</span>
-              <Input
-                type="email"
-                placeholder="Email Address"
-                name="email"
-                value={billingInfo.email}
-                onChange={handleInputChange}
-                status={errors.email ? "error" : ""}
-              />
-            </div>
+              <div className="input-row">
+                <span>Email Address *</span>
+                <Input
+                    type="email"
+                    placeholder="Email Address"
+                    name="email"
+                    value={billingInfo.email}
+                    onChange={handleInputChange}
+                    status={errors.email ? "error" : ""}
+                />
+              </div>
 
-            <div className="input-row">
-              <span>Phone Number</span>
-              <Input
-                placeholder="Phone Number"
-                name="phone"
-                value={billingInfo.phone}
-                onChange={handleInputChange}
-              />
-            </div>
+              <div className="input-row">
+                <span>Phone Number</span>
+                <Input
+                    placeholder="Phone Number"
+                    name="phone"
+                    value={billingInfo.phone}
+                    onChange={handleInputChange}
+                />
+              </div>
 
-            <div className="input-row">
-              <span>Street Address *</span>
-              <Input
-                placeholder="Street Address"
-                name="street"
-                value={billingInfo.street}
-                onChange={handleInputChange}
-                status={errors.street ? "error" : ""}
-              />
-            </div>
+              <div className="input-row full-row">
+                <span>Street Address *</span>
+                <Input
+                    placeholder="Street Address"
+                    name="street"
+                    value={billingInfo.street}
+                    onChange={handleInputChange}
+                    status={errors.street ? "error" : ""}
+                />
+              </div>
 
-            <div className="input-row">
-              <span>Country *</span>
-              <Select
-                placeholder="Select a Country"
-                name="country"
-                value={billingInfo.country}
-                onChange={(value) =>
-                  handleInputChange({ target: { name: "country", value } })
-                }
-                status={errors.country ? "error" : ""}
-              >
-                <Select.Option value="us">United States</Select.Option>
-                <Select.Option value="de">Germany</Select.Option>
-                <Select.Option value="fr">France</Select.Option>
-              </Select>
-            </div>
+              <div className="input-row">
+                <span>Country *</span>
+                <Select
+                    placeholder="Select a Country"
+                    name="country"
+                    value={billingInfo.country}
+                    onChange={(value) =>
+                        handleInputChange({ target: { name: "country", value } })
+                    }
+                    status={errors.country ? "error" : ""}
+                >
+                  <Select.Option value="us">United States</Select.Option>
+                  <Select.Option value="de">Germany</Select.Option>
+                  <Select.Option value="fr">France</Select.Option>
+                </Select>
+              </div>
 
-            <div className="input-row">
-              <span>City *</span>
-              <Input
-                placeholder="City"
-                name="city"
-                value={billingInfo.city}
-                onChange={handleInputChange}
-                status={errors.city ? "error" : ""}
-              />
-            </div>
+              <div className="input-row">
+                <span>City *</span>
+                <Input
+                    placeholder="City"
+                    name="city"
+                    value={billingInfo.city}
+                    onChange={handleInputChange}
+                    status={errors.city ? "error" : ""}
+                />
+              </div>
 
-            <div className="input-row">
-              <span>ZIP Code *</span>
-              <Input
-                placeholder="ZIP Code"
-                name="zip"
-                value={billingInfo.zip}
-                onChange={handleInputChange}
-                status={errors.zip ? "error" : ""}
-              />
+              <div className="input-row">
+                <span>ZIP Code *</span>
+                <Input
+                    placeholder="ZIP Code"
+                    name="zip"
+                    value={billingInfo.zip}
+                    onChange={handleInputChange}
+                    status={errors.zip ? "error" : ""}
+                />
+              </div>
             </div>
-          </div>
         )}
 
         {activeTab === 3 && (
-          <div className="order-summary">
-            <Card title="Delivery Address" style={{ marginBottom: "20px" }}>
-              <p>{billingInfo.name}</p>
-              <p>{billingInfo.address}</p>
-              <p>
-                {billingInfo.city}, {billingInfo.zip}
-              </p>
-            </Card>
+            <div className="order-summary-container">
+              <div className="order-details">
+                {cartItems.map((item) => (
+                    <div key={item.id} className="cart-item-2">
+                      {/* Item image */}
+                      <img src={item.image} alt={item.title} className="item-image" />
+                      {/* Item name */}
+                      <span className="item-name">{item.title}</span>
+                      {/* Quantity select */}
+                      <InputNumber
+                          min={1}
+                          disabled
+                          value={item.quantity}
+                      />
+                      {/* Price and trash icon */}
+                      <span className="item-price">
+            ${item.reducedPrice * item.quantity}
+          </span>
+                    </div>
+                ))}
+              </div>
 
-            <Card title="Payment Method" style={{ marginBottom: "20px" }}>
-              <p>Method: {paymentMethod.method}</p>
-              <p>Card Number: {paymentMethod.cardNumber}</p>
-            </Card>
+              <div className="order-cards">
+                <Card title="Delivery Address" style={{marginBottom: "20px"}}>
+                  <p className="first-span">Name: {billingInfo.firstName} {' '}{billingInfo.name}</p>
+                  <p className="normal-span">Address: {billingInfo.street}</p>
+                  <p className="last-span">
+                    City: {billingInfo.city}, {billingInfo.zip}
+                  </p>
+                  <p className="last-span">
+                    Country: {billingInfo.country === "de" ? "Germany" : "USA"}
+                  </p>
+                </Card>
 
-            <Card title="Order Summary">
-              <p>Total Costs: {totalCosts.total}</p>
-              <p>{totalCosts.deliveryDate}</p>
-            </Card>
-          </div>
+                <Card title="Payment Method" style={{marginBottom: "20px"}}>
+                  <p className="first-span">Method: {paymentMethod.method}</p>
+                  <p className="last-span">Card Number: {paymentMethod.cardNumber}</p>
+                </Card>
+
+                <Card title="Order Summary">
+                  <h3 className="first-span">Total Costs: {totalCosts.total}</h3>
+                  <p className="last-span">{totalCosts.deliveryDate}</p>
+                </Card>
+              </div>
+            </div>
         )}
+
       </div>
 
       <div className="step-buttons-container">

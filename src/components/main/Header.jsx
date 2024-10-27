@@ -23,28 +23,31 @@ import {
   LoginOutlined,
 } from "@ant-design/icons";
 import "../../css/header.css";
-import { useState } from "react";
+import {useEffect, useState} from "react";
+import ProductCategories from "../other/ProductCategories";
 
 const { Header } = Layout;
 const { Search } = Input;
 
 function AppHeader({ sCount, cCount, data = [], loginDefault = true }) {
   const [visible, setVisible] = useState(false);
-  const [login, setLogin] = useState(loginDefault);
+  const [login, setLogin] = useState(localStorage.getItem("isLoggedIn") === "true");
   const [isModalVisible, setIsModalVisible] = useState(false);
   const [searchResults, setSearchResults] = useState([]);
   const [form] = Form.useForm();
 
+  useEffect(() => {
+    const loggedIn = localStorage.getItem("isLoggedIn") === "true";
+    setLogin(loggedIn);
+  }, [login]);
+
   const handleSearch = (value) => {
     const search = value.currentTarget.value;
     if (!value.currentTarget.value) {
-      setSearchResults([]); // Reset if search input is cleared
+      setSearchResults([]);
       return;
     }
 
-    console.log(search);
-
-    // Perform search filtering
     const results = [...data.cards, ...data.cards2, ...data.cards3].filter(
       (item) => item.title.toLowerCase().includes(search.toLowerCase())
     );
@@ -71,25 +74,30 @@ function AppHeader({ sCount, cCount, data = [], loginDefault = true }) {
 
   const handleLoginLogout = () => {
     if (login) {
-      setLogin(false); // Handle logout logic here
+      // Log out
+      setLogin(false);
+      localStorage.removeItem("isLoggedIn");
       message.success("You have been logged out!");
     } else {
       setIsModalVisible(true);
     }
   };
 
+
   const handleLogin = () => {
     form
-      .validateFields()
-      .then((values) => {
-        setLogin(true);
-        setIsModalVisible(false);
-        message.success("Logged in successfully!");
-      })
-      .catch((info) => {
-        console.log("Validation Failed:", info);
-      });
+        .validateFields()
+        .then((values) => {
+          setLogin(true);
+          localStorage.setItem("isLoggedIn", "true");
+          setIsModalVisible(false);
+          message.success("Logged in successfully!");
+        })
+        .catch((info) => {
+          console.log("Validation Failed:", info);
+        });
   };
+
 
   const handleCancel = () => {
     setIsModalVisible(false);
@@ -218,15 +226,16 @@ function AppHeader({ sCount, cCount, data = [], loginDefault = true }) {
           </Badge>
         </div>
 
-        <Drawer
-          title="Menu"
-          placement="left"
-          onClose={closeDrawer}
-          visible={visible}
-          className="app-drawer"
-        >
-          <p>Content goes here</p>
-        </Drawer>
+      <Drawer
+        title="Menu"
+        placement="left"
+        onClose={closeDrawer}
+        visible={visible}
+        className="app-drawer"
+      >
+        <p>Content goes here</p>
+        <ProductCategories />
+      </Drawer>
 
         <Modal
           title="Login"

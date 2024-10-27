@@ -73,10 +73,114 @@
   height: 150px;
   width: 100%;
   background-color: rgba(0, 21, 41, 0.85);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer-row p {
+  font-size: 16px;
+  font-weight: bold;
+  color: orange;
+  margin: 0;
+}
+
+.testTag{
+  margin-right: 50%;
 }
 
 .footer-trust-seals {
   height: 320px;
   width: 100%;
   background-color: var(--primary);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  padding: 20px;
+  gap: 15px;
+}
+.footer-legal-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+.footer-legal-links a {
+  color: #f5a623; /* Optional: Choose a color that fits your theme */
+  text-decoration: none;
+}
+
+.footer-legal-links a:hover {
+  text-decoration: underline;
+}
+
+.trust-seals-container {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.trust-seal {
+  max-width: 300px;
+  text-align: center;
+}
+
+.trust-seal p:first-child {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #f5a623;
+}
+
+.trust-seal p:last-child {
+  font-size: 14px;
+}
+
+.footer-row {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  margin-top: 1%;
+  position: relative;
+}
+
+.footer-row p {
+  font-size: 16px;
+  font-weight: bold;
+  color: orange;
+  margin: 0;
+  position: absolute;
+}
+
+.footer-row p:first-child {
+  left: 25%;
+}
+
+.footer-row p:last-child {
+  right: 25%;
+}
+
+.delivery-partners,
+.payment-methods {
+  display: flex;
+  gap: 10px;
+  position: absolute;
+  top: 20px;
+}
+
+.delivery-partners {
+  left: 23%;
+}
+
+.payment-methods {
+  right: 17%;
+}
+
+.delivery-partners img,
+.payment-methods img {
+  height: 40px;
 }
