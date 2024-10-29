@@ -24,7 +24,6 @@ import {
 } from "@ant-design/icons";
 import "../../css/header.css";
 import {useEffect, useState} from "react";
-import ProductCategories from "../other/ProductCategories";
 
 const { Header } = Layout;
 const { Search } = Input;
@@ -234,7 +233,6 @@ function AppHeader({ sCount, cCount, data = [], loginDefault = true }) {
         className="app-drawer"
       >
         <p>Content goes here</p>
-        <ProductCategories />
       </Drawer>
 
         <Modal
