@@ -25,7 +25,7 @@ const items = [
   },
   {
     id: 2,
-    image: "/images/iphone-15-black.avif",
+    image: "/images/iphone-15-black.png",
     title: "Iphone 15",
     price: 1199.99,
     reducedPrice: 1049.99,
