@@ -20,13 +20,14 @@ function App() {
         title: "Iphone 15",
         price: 1199.99,
         reducedPrice: 1049.99,
+        itemDescription: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius perspiciatis reiciendis impedit consectetur nisi consequuntur voluptatum nesciunt fugiat labore quae cum culpa soluta dicta molestias adipisci commodi molestiae, recusandae eaque.',
         subImages: [
           { src: "/images/iphone-15-black.avif", title: "Black" },
           { src: "/images/iphone-15-blue.avif", title: "Blue" },
           { src: "/images/iphone-15-nature.avif", title: "Nature" },
           { src: "/images/iphone-15-white.avif", title: "White" },
         ],
-        color: [
+        colors: [
           {colorHex: '#535250', colorName: 'Cavernous' },
           {colorHex: '#535967', colorName: 'Dark Mineral' },
           {colorHex: 'bab0a7', colorName: 'Chateau Grey' },

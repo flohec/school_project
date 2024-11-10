@@ -84,9 +84,8 @@ const ItemView = ({ data }) => {
           </div>
 
           <div className="right-side">
-
-            <div>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. In ex, eligendi qui quis vitae, impedit libero sunt minus inventore, ratione molestiae quia fugit cupiditate quidem ab! Quo nulla non quod?
+            <div className="item-description">
+              {selectedItem.itemDescription}
             </div>
 
             <p className="sub-image-title">Colour: {mainImage.title}</p>
