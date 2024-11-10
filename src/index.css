@@ -11,6 +11,10 @@ body {
   background-color: var(--background-light);
 }
 
+.material-symbols-outlined {
+  font-size: 36px;
+}
+
 #root {
   flex: 1;
 }

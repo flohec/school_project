@@ -1,38 +1,79 @@
-.item-view {
+.site-content {
+  width: 1200px;
   display: flex;
-}
-
-.left-side {
-  margin-top: 5%;
-  width: 70%;
-  margin-left: -10%;
-}
-
-.right-side {
-  margin-top: 15%;
-  width: 30%;
-  display: flex;
+  justify-content: center;
   flex-direction: column;
   align-items: center;
+}
+
+.item-view {
+  display: flex;
+  justify-content: space-between;
+  gap: 200px;
+  margin-bottom: 20px;
+}
+
+.item-image-gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.item-image-gallery:first-child {
+  border-collapse: collapse;
 }
 
 .sub-image-title {
   margin-bottom: 10px; /* Space between the title and images */
   font-size: 18px;
   font-weight: bold;
+
+}
+
+.image-group {
+  display: flex;
+  flex-direction: row;
 }
 
 .right-side {
   display: flex;
+  justify-content: center;
   flex-direction: column;
+  align-items: center;
   align-items: flex-start; /* Align all elements starting from the same vertical */
 }
+
+.main-image {
+  padding-left: 20px;
+}
+
 
 .sub-images-row,
 .sub-storage-row {
   display: flex;
-  gap: 10px;
+  gap: 5px;
   align-items: flex-start; /* Ensures vertical alignment */
+}
+
+.sub-image {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.choice-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid gray;
+  cursor: pointer;
+  width: 80px;
+  border-radius: 10px;
+}
+
+.storage-title {
+  margin: 0;
+  padding: 10px;
 }
 
 .sub-image-container,
@@ -41,25 +82,19 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: 2px solid gray;
-  padding: 5px;
+  border: 1px solid gray;
+  padding: 2px;
   cursor: pointer;
-  width: 100px; /* Fixed width for consistent sizing */
-  height: 100px; /* Fixed height for consistent sizing */
+  width: 40px; /* Fixed width for consistent sizing */
+  height: 40px; /* Fixed height for consistent sizing */
 }
 
 .first-image {
-  border-color: orange; /* First image with different border color */
-}
-
-.sub-image {
-  width: 80px;
-  height: 80px;
-  object-fit: contain;
+  border-color: var(--secondary); /* First image with different border color */
 }
 
 .sub-image-container:hover {
-  border-color: orange; /* Border color on hover */
+  border-color: var(--secondary); /* Border color on hover */
 }
 
 .sub-storage {
@@ -69,7 +104,7 @@
 }
 
 .sub-storage-container:hover {
-  border-color: orange; /* Border color on hover */
+  border-color: var(--secondary); /* Border color on hover */
 }
 
 .rating-container {
@@ -108,7 +143,7 @@
   align-items: center; /* Center items vertically */
   justify-content: center; /* Center content */
   padding: 10px 15px;
-  background-color: orange; /* Green background */
+  background-color: var(--secondary); /* Green background */
   color: black; /* White text color */
   border: none;
   border-radius: 5px;

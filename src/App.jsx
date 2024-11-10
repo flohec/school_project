@@ -26,6 +26,12 @@ function App() {
           { src: "/images/iphone-15-nature.avif", title: "Nature" },
           { src: "/images/iphone-15-white.avif", title: "White" },
         ],
+        color: [
+          {colorHex: '#535250', colorName: 'Cavernous' },
+          {colorHex: '#535967', colorName: 'Dark Mineral' },
+          {colorHex: 'bab0a7', colorName: 'Chateau Grey' },
+          {colorHex: 'f3eeea', colorName: 'Pink Mirage' }
+        ],
         storage: [
           { title: "128GB", extraPrice: 0 },
           { title: "256GB", extraPrice: 100 },
