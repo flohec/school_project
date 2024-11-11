@@ -28,6 +28,7 @@ const ItemView = ({ data }) => {
   }
 
   const [mainImage, setMainImage] = useState(selectedItem.subImages[0]);
+  const [color, setColor] = useState(selectedItem.colors[0]);
   const [storage, setStorage] = useState(selectedItem.storage[0]);
   const [price, setPrice] = useState(selectedItem.reducedPrice);
   const [price2, setPrice2] = useState(selectedItem.price);
@@ -88,22 +89,23 @@ const ItemView = ({ data }) => {
               {selectedItem.itemDescription}
             </div>
 
-            <p className="sub-image-title">Colour: {mainImage.title}</p>
+            <p className="sub-image-title">Color: {color.colorName}</p>
 
             <div className="sub-images-row">
-              {selectedItem.subImages.map((subImage, index) => (
+              {selectedItem.colors.map((subColor, index) => (
                 <div
                   key={index}
-                  className={`choice-button ${
-                    mainImage.src === subImage.src ? "first-image" : ""
+                  className={`choice-button-color ${
+                    color.colorName === subColor.colorName ? "first-image" : ""
                   }`}
-                  onClick={() => setMainImage(subImage)}
+                  onClick={() =>
+                    setColor(subColor)
+                  }
+                  style={{ backgroundColor: subColor.colorHex }}
                 >
-                  <img
-                    src={subImage.src}
-                    alt={`SubImage ${index + 1}`}
-                    className="sub-image"
-                  />
+                  <span className="color-title" style={{ color: subColor.colorText }}>
+                    {subColor.colorName}
+                  </span>
                 </div>
               ))}
             </div>
@@ -114,7 +116,7 @@ const ItemView = ({ data }) => {
               {selectedItem.storage.map((subStorage, index) => (
                 <div
                   key={index}
-                  className={`choice-button ${
+                  className={`choice-button-text ${
                     storage.title === subStorage.title ? "first-image" : ""
                   }`}
                   onClick={() => handleStorageClick(subStorage)}

@@ -28,10 +28,10 @@ function App() {
           { src: "/images/iphone-15-white.avif", title: "White" },
         ],
         colors: [
-          {colorHex: '#535250', colorName: 'Cavernous' },
-          {colorHex: '#535967', colorName: 'Dark Mineral' },
-          {colorHex: 'bab0a7', colorName: 'Chateau Grey' },
-          {colorHex: 'f3eeea', colorName: 'Pink Mirage' }
+          {colorHex: '#535250', colorName: 'Cavernous', colorText: 'white' },
+          {colorHex: '#535967', colorName: 'Dark Mineral', colorText: 'white' },
+          {colorHex: '#bab0a7', colorName: 'Chateau Grey', colorText: 'black' },
+          {colorHex: '#f3eeea', colorName: 'Pink Mirage', colorText: 'black' }
         ],
         storage: [
           { title: "128GB", extraPrice: 0 },
