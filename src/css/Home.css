@@ -22,7 +22,6 @@
 .footer{
   display: flex;
   flex-direction: column;
-  margin-top: 50px;
   bottom: 0;
   width: 100%;
   background-color: var(--background-dark);

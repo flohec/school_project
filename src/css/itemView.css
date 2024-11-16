@@ -1,4 +1,6 @@
 .site-content {
+  background-color: white;
+  padding: 0 0px 100px;
   width: 1200px;
   display: flex;
   justify-content: center;
@@ -6,21 +8,96 @@
   align-items: center;
 }
 
-.item-view {
-  display: flex;
-  justify-content: space-between;
-  gap: 200px;
-  margin-bottom: 20px;
-}
 
-.item-image-gallery {
+
+/*##### START ############
+  item immages and details 
+  ########################*/
+
+  
+  .item-body {
+    width: fit-content;
+    margin-top: 80px;
+    margin-bottom: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 80px;
+  }
+  
+  .item-image-group {
+    display: inline-flex;
+    flex-direction: row;
+  }
+  
+  .item-image-gallery {
+    margin-top: 20px;
+  height: fit-content;
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   gap: 2px;
 }
 
-.item-image-gallery:first-child {
-  border-collapse: collapse;
+.sub-image-container:hover {
+  border-color: var(--secondary);
+}
+
+.sub-image-container,
+.sub-storage-container {
+  height: 50px;
+  display: flex;
+  box-sizing: border-box;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid gray;
+  padding: 2px;
+  cursor: pointer;
+}
+
+.active-image {
+  height: 50px;
+  display: flex;
+  box-sizing: border-box;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid var(--secondary);
+  padding: 2px;
+  cursor: pointer;
+}
+
+.item-main-image {
+  object-position: top;
+  height: 500px;
+  width: 400px;
+  object-fit: contain;
+}
+
+.item-details {
+  width: 500px;
+  display: inline-flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: flex-start; /* Align all elements starting from the same vertical */
+}
+
+.item-details-button-area {
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.item-title{
+  margin-bottom: 0px;
+}
+
+.rating-container {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin: 5px 0 8px 0;
 }
 
 .sub-image-title {
@@ -30,26 +107,12 @@
 
 }
 
-.image-group {
-  display: flex;
-  flex-direction: row;
-}
-
-.right-side {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  align-items: flex-start; /* Align all elements starting from the same vertical */
-}
-
-.main-image {
-  padding-left: 20px;
+.item-main-image-container {
+  margin-left: 20px;
 }
 
 .item-description{
   padding-bottom: 20px;
-  border-bottom: 1px solid var(--primary);
 }
 
 .sub-images-row,
@@ -60,6 +123,7 @@
 }
 
 .sub-image {
+  margin: 1px;
   width: 40px;
   height: 40px;
   object-fit: contain;
@@ -94,27 +158,6 @@
   padding: 10px;
 }
 
-.sub-image-container,
-.sub-storage-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  border: 1px solid gray;
-  padding: 2px;
-  cursor: pointer;
-  width: 40px; /* Fixed width for consistent sizing */
-  height: 40px; /* Fixed height for consistent sizing */
-}
-
-.first-image {
-  border-color: var(--secondary); /* First image with different border color */
-}
-
-.sub-image-container:hover {
-  border-color: var(--secondary); /* Border color on hover */
-}
-
 .sub-storage {
   width: 80px;
   height: 80px;
@@ -125,15 +168,19 @@
   border-color: var(--secondary); /* Border color on hover */
 }
 
-.rating-container {
-  display: flex; /* Arrange items in a row */
-  align-items: center; /* Vertically center the rating and text */
-  gap: 10px; /* Add some space between the stars and text */
+.description-title {
+  font-weight: bold;
+}
+
+.description-list-container {
+  font-size: 14px;
+  padding-bottom: 10px;
 }
 
 .star-rating-text {
+  font-weight: bold;
   font-size: 14px;
-  margin-left: 8px; /* Adjust this value for proper spacing */
+  margin: 0 0 0 8px;
 }
 
 .price-row {
@@ -157,22 +204,30 @@
 }
 
 .add-to-cart-button-item {
-  display: flex; /* Use flexbox to align items */
-  align-items: center; /* Center items vertically */
-  justify-content: center; /* Center content */
+  display: flex; 
+  align-items: center; 
+  justify-content: center;
   padding: 10px 15px;
-  background-color: var(--secondary); /* Green background */
-  color: black; /* White text color */
+  background-color: var(--secondary); 
+  color: black; 
   border: none;
   border-radius: 5px;
   cursor: pointer;
   font-size: 20px;
-  width: 100%;
+  width: 200px;
   height: 9%;
 }
 .cart-icon {
-  margin-right: 8px; /* Space between icon and text */
+  margin-right: 8px; 
 }
+
+/*##### END ############
+  item immages and details 
+########################*/
+
+/*##### START ######
+  Review styles
+##################*/
 
 .reviews-section {
   margin-top: 30px;
@@ -233,3 +288,6 @@
   font-size: 16px;
   color: #555;
 }
+/*##### END ######
+  Review styles
+################*/
