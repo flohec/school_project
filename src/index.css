@@ -15,8 +15,18 @@ body {
   background-color: var(--background-light);
 }
 
-.divider{
-  border-bottom: 1px solid lightgray;
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.divider-2 {
+  border-bottom: 2px solid var(--background-dark);
+  width: 100%;
+}
+
+.divider-1 {
+  border-bottom: 1px solid var(--background-dark);
   width: 100%;
 }
 

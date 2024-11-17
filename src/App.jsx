@@ -16,7 +16,7 @@ function App() {
   const data = {
     cards: [
       {
-        image: "/images/iphone-15-black.jpg",
+        image: "/images/iphone-15-black-front-back.jpg",
         title: "Iphone 15",
         price: 1199.99,
         reducedPrice: 1049.99,
@@ -29,6 +29,7 @@ function App() {
               { src: "/images/iphone-15-black-half.jpg"},
               { src: "/images/iphone-15-black-side.jpg"},
               { src: "/images/iphone-15-black-cable.jpg"},
+              { src: "/images/iphone-15-collection.jpg"},
             ]
           },
           {
@@ -38,6 +39,7 @@ function App() {
               { src: "/images/iphone-15-blue-half.jpg"},
               { src: "/images/iphone-15-blue-side.jpg"},
               { src: "/images/iphone-15-blue-cable.jpg"},
+              { src: "/images/iphone-15-collection.jpg"},
             ]
           },
           {
@@ -47,6 +49,7 @@ function App() {
               { src: "/images/iphone-15-nature-half.jpg"},
               { src: "/images/iphone-15-nature-side.jpg"},
               { src: "/images/iphone-15-nature-cable.jpg"},
+              { src: "/images/iphone-15-collection.jpg"},
             ]
           },
           {
@@ -56,6 +59,7 @@ function App() {
               { src: "/images/iphone-15-white-half.jpg"},
               { src: "/images/iphone-15-white-side.jpg"},
               { src: "/images/iphone-15-white-cable.jpg"},
+              { src: "/images/iphone-15-collection.jpg"},
             ]
           },
         ],
@@ -63,7 +67,7 @@ function App() {
           { index: 'titanBlack', colorHex: '#535250', colorName: 'Titan-Black', colorText: 'white' },
           { index: 'titanBlue', colorHex: '#535967', colorName: 'Titan-Blue', colorText: 'white' },
           { index: 'titanNature', colorHex: '#bab0a7', colorName: 'Titan-Nature', colorText: 'black' },
-          { index: 'titanWhite', colorHex: '#f3eeea', colorName: 'Titan-white', colorText: 'black' },
+          { index: 'titanWhite', colorHex: '#f3eeea', colorName: 'Titan-White', colorText: 'black' },
         ],
         storage: [
           { title: "128GB", extraPrice: 0 },

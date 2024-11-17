@@ -8,12 +8,9 @@
   align-items: center;
 }
 
-
-
 /*##### START ############
   item immages and details 
   ########################*/
-
   
   .item-body {
     width: fit-content;
@@ -26,6 +23,7 @@
   }
   
   .item-image-group {
+    margin-top: 20px;
     display: inline-flex;
     flex-direction: row;
   }
@@ -70,7 +68,7 @@
 }
 
 .item-main-image {
-  object-position: top;
+  object-position: center;
   height: 500px;
   width: 400px;
   object-fit: contain;
@@ -86,11 +84,11 @@
 
 .item-details-button-area {
   width: 100%;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 .item-title{
-  margin-bottom: 0px;
+  margin: 0px;
 }
 
 .rating-container {
@@ -111,15 +109,68 @@
   margin-left: 20px;
 }
 
-.item-description{
-  padding-bottom: 20px;
+.item-description-list {
+  margin: 0 0 25px 0;
 }
 
-.sub-images-row,
-.sub-storage-row {
+.item-description-textbox{
+  padding: 0px 20px;
+}
+
+.text-box-expand-icon {
+  margin: 0 5px;
+}
+
+.textbox-expansion-button-container {
+  position: sticky;
+  bottom: 0;
+  width: 100%;
+}
+
+.gradient-box {
+  bottom: 20px;
+  position: absolute;
+  width: 100%;
+  height: 20px;
+  background-image: linear-gradient( to top, white 20%, transparent);
+}
+
+.textbox-expansion-button-button-wrapper {
+  display: flex;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+}
+
+.textbox-expansion-button:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.textbox-expansion-button {
+  color: var(--primary);
+  font-weight: bold;
+  height: 20px;
+  border: 0 solid transparent;
+  background-color: white;
+}
+
+.is-expanded {
+  height: fit-content;
+}
+
+.is-collapsed {
+  overflow: hidden;
+  height: 200px;
+}
+
+.sub-choice-row {
+  align-items: center;
   display: flex;
   gap: 5px;
-  align-items: flex-start; /* Ensures vertical alignment */
 }
 
 .sub-image {
@@ -129,16 +180,43 @@
   object-fit: contain;
 }
 
-.choice-button-text {
+.choice-button-storage {
   display: flex;
   justify-content: center;
   align-items: center;
   border: 1px solid gray;
   cursor: pointer;
-  width: 80px;
+  width: 90px;
   border-radius: 10px;
 }
 
+.choice-button-storage-content {
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.choice-button-storage-title {
+  text-align: center;
+  width: 100%;
+  background-color: var(--background-light);
+  font-size: 14px;
+  font-weight: bold;
+  background-clip: border-box;
+  border-radius: 10px 10px 0 0;
+}
+
+.choice-button-storage-price {
+  font-size: 14px;
+}
+
+.choice-button-storage:hover,
+.choice-button-color:hover {
+  border-color: var(--secondary);
+}
 .choice-button-color {
   text-align: center;
   display: flex;
@@ -146,11 +224,15 @@
   align-items: center;
   border: 1px solid gray;
   cursor: pointer;
-  width: 80px;
-  height: 38px;
+  width: 40px;
+  height: 40px;
   border-radius: 10px;
   font-size: 15px;
   padding: 5px;
+}
+
+.active-choice-button {
+  border: 2px solid var(--secondary)
 }
 
 .storage-title {
@@ -183,42 +265,46 @@
   margin: 0 0 0 8px;
 }
 
+.item-price-button-box {
+  align-items: center;
+  justify-content: center;
+}
+
 .price-row {
-  display: flex;
-  justify-content: space-between;
   width: 100%;
-  margin: 10px 0; /* Space between the price row and the button */
+  margin: 20px 0; /* Space between the price row and the button */
 }
 
-.canceled-price {
-  text-decoration: line-through; /* Style for canceled price */
-  color: grey; /* Color for canceled price */
-  font-weight: bold;
-  font-size: 24px;
-}
-
-.reduced-price-item {
-  color: red; /* Color for reduced price */
-  font-weight: bold;
-  font-size: 24px;
-}
-
-.add-to-cart-button-item {
+.item-add-to-cart-button {
+  box-shadow: 0 2px 0 rgba(5, 145, 255, 0.1);
   display: flex; 
   align-items: center; 
   justify-content: center;
-  padding: 10px 15px;
+  padding: 0px;
   background-color: var(--secondary); 
   color: black; 
   border: none;
-  border-radius: 5px;
+  border-radius: 18px;
   cursor: pointer;
   font-size: 20px;
-  width: 200px;
-  height: 9%;
+  width: 180px;
+  height: 36px;
+  text-wrap: nowrap;
+  transition: background-color 0.25s linear;
 }
-.cart-icon {
-  margin-right: 8px; 
+.item-add-to-cart-button-text {
+  padding: 0 15px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.item-add-to-cart-button:hover {
+  background-color: #1677ff; 
+  color: #fff; 
+}
+
+.item-add-to-cart-button-cart-icon {
+  padding-left: 15px;
 }
 
 /*##### END ############
