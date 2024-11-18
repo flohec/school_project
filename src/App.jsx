@@ -21,10 +21,10 @@ function App() {
         price: 1199.99,
         reducedPrice: 1049.99,
         subImages: [
-          { src: "/images/iphone-15-black.avif", title: "Black" },
-          { src: "/images/iphone-15-blue.avif", title: "Blue" },
-          { src: "/images/iphone-15-nature.avif", title: "Nature" },
-          { src: "/images/iphone-15-white.avif", title: "White" },
+          { src: "/images/iphone-15-black.png", title: "Black" },
+          { src: "/images/iphone-15-blue.png", title: "Blue" },
+          { src: "/images/iphone-15-nature.png", title: "Nature" },
+          { src: "/images/iphone-15-white.png", title: "White" },
         ],
         storage: [
           { title: "128GB", extraPrice: 0 },
