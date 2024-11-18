@@ -16,15 +16,58 @@ function App() {
   const data = {
     cards: [
       {
-        image: "/images/iphone-15-black.avif",
+        image: "/images/iphone-15-black-front-back.jpg",
         title: "Iphone 15",
         price: 1199.99,
         reducedPrice: 1049.99,
-        subImages: [
-          { src: "/images/iphone-15-black.png", title: "Black" },
-          { src: "/images/iphone-15-blue.png", title: "Blue" },
-          { src: "/images/iphone-15-nature.png", title: "Nature" },
-          { src: "/images/iphone-15-white.png", title: "White" },
+        itemDescription: ["Forged from titanium - The iPhone 15 Pro Max has a robust and lightweight design made of space grade titanium with a textured matte glass back. It also has a ceramic shield front that can withstand more than any smartphone glass. And it is protected from water and dust.", "Advanced display – The 6.7 Super Retina XDR display with ProMotion increases refresh rates up to 120 Hz when you need a lot of graphics power. Dynamic Island brings notifications and live activities forward. And with the Always On Display, the lock screen always shows your most important information without having to tap it.", "ALL CHANGING A17 PRO CHIP – A Pro GPU makes games an immersive experience, with detailed environments and realistic characters. The A17 Pro is incredibly efficient and ensures that you have battery for the whole day.", "POWERFUL PRO CAMERA SYSTEM - Incredible flexibility in choosing the image section, as if you had 7 Pro lenses. Take super-high-resolution photos with more colour and detail with the 48MP main camera. And with the 5x Tele camera in the iPhone 15 Pro Max, you can take sharper close-up shots from a greater distance.", "Customizable action button - The action button takes you directly to your favourite feature. Simply set mute mode, camera, voice memo, shortcut or other feature. Then all you have to do is press and hold the Action Button to start it.", "Pro connectivity - Via the USB C port, you can charge your Mac or iPad with the same cable you use to charge your iPhone 15 Pro Max. With USB 3, you get a huge leap in data transfer.4 And you can load files with Wi-Fi 6E up to 2x faster.", "Important safety features - If you need to contact an emergency service but have no network and no WiFi, you can use emergency call SOS via satellite. With accident detection, the iPhone can detect a serious car accident and call for help when you can't."],
+        galleryImages: [
+          {
+            index: "titanBlack",
+            images: [
+              { src: "/images/iphone-15-black-front-back.jpg"},
+              { src: "/images/iphone-15-black-half.jpg"},
+              { src: "/images/iphone-15-black-side.jpg"},
+              { src: "/images/iphone-15-black-cable.jpg"},
+              { src: "/images/iphone-15-collection.jpg"},
+            ]
+          },
+          {
+            index: "titanBlue",
+            images: [
+              { src: "/images/iphone-15-blue-front-back.jpg"},
+              { src: "/images/iphone-15-blue-half.jpg"},
+              { src: "/images/iphone-15-blue-side.jpg"},
+              { src: "/images/iphone-15-blue-cable.jpg"},
+              { src: "/images/iphone-15-collection.jpg"},
+            ]
+          },
+          {
+            index: "titanNature",
+            images: [
+              { src: "/images/iphone-15-nature-front-back.jpg"},
+              { src: "/images/iphone-15-nature-half.jpg"},
+              { src: "/images/iphone-15-nature-side.jpg"},
+              { src: "/images/iphone-15-nature-cable.jpg"},
+              { src: "/images/iphone-15-collection.jpg"},
+            ]
+          },
+          {
+            index: "titanWhite",
+            images: [
+              { src: "/images/iphone-15-white-front-back.jpg"},
+              { src: "/images/iphone-15-white-half.jpg"},
+              { src: "/images/iphone-15-white-side.jpg"},
+              { src: "/images/iphone-15-white-cable.jpg"},
+              { src: "/images/iphone-15-collection.jpg"},
+            ]
+          },
+        ],
+        colors: [
+          { index: 'titanBlack', colorHex: '#535250', colorName: 'Titan-Black', colorText: 'white' },
+          { index: 'titanBlue', colorHex: '#535967', colorName: 'Titan-Blue', colorText: 'white' },
+          { index: 'titanNature', colorHex: '#bab0a7', colorName: 'Titan-Nature', colorText: 'black' },
+          { index: 'titanWhite', colorHex: '#f3eeea', colorName: 'Titan-White', colorText: 'black' },
         ],
         storage: [
           { title: "128GB", extraPrice: 0 },

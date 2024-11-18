@@ -97,7 +97,7 @@ const ReviewCard = () => {
 
       <Modal
         title="Add your review"
-        visible={isModalVisible}
+        open={isModalVisible}
         onOk={handleOk}
         onCancel={handleCancel}
       >

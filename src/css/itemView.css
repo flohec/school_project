@@ -1,65 +1,243 @@
-.item-view {
+.site-content {
+  background-color: white;
+  padding: 0 0px 100px;
+  width: 1200px;
   display: flex;
-}
-
-.left-side {
-  margin-top: 5%;
-  width: 70%;
-  margin-left: -10%;
-}
-
-.right-side {
-  margin-top: 15%;
-  width: 30%;
-  display: flex;
+  justify-content: center;
   flex-direction: column;
   align-items: center;
+}
+
+/*##### START ############
+  item immages and details 
+  ########################*/
+  
+  .item-body {
+    width: fit-content;
+    margin-top: 80px;
+    margin-bottom: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 80px;
+  }
+  
+  .item-image-group {
+    margin-top: 20px;
+    display: inline-flex;
+    flex-direction: row;
+  }
+  
+  .item-image-gallery {
+    margin-top: 20px;
+  height: fit-content;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 2px;
+}
+
+.sub-image-container:hover {
+  border-color: var(--secondary);
+}
+
+.sub-image-container,
+.sub-storage-container {
+  height: 50px;
+  display: flex;
+  box-sizing: border-box;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid gray;
+  padding: 2px;
+  cursor: pointer;
+}
+
+.active-image {
+  height: 50px;
+  display: flex;
+  box-sizing: border-box;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid var(--secondary);
+  padding: 2px;
+  cursor: pointer;
+}
+
+.item-main-image {
+  object-position: center;
+  height: 500px;
+  width: 400px;
+  object-fit: contain;
+}
+
+.item-details {
+  width: 500px;
+  display: inline-flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: flex-start; /* Align all elements starting from the same vertical */
+}
+
+.item-details-button-area {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.item-title{
+  margin: 0px;
+}
+
+.rating-container {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin: 5px 0 8px 0;
 }
 
 .sub-image-title {
   margin-bottom: 10px; /* Space between the title and images */
   font-size: 18px;
   font-weight: bold;
+
 }
 
-.right-side {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start; /* Align all elements starting from the same vertical */
+.item-main-image-container {
+  margin-left: 20px;
 }
 
-.sub-images-row,
-.sub-storage-row {
-  display: flex;
-  gap: 10px;
-  align-items: flex-start; /* Ensures vertical alignment */
+.item-description-list {
+  margin: 0 0 25px 0;
 }
 
-.sub-image-container,
-.sub-storage-container {
+.item-description-textbox{
+  padding: 0px 20px;
+}
+
+.text-box-expand-icon {
+  margin: 0 5px;
+}
+
+.textbox-expansion-button-container {
+  position: sticky;
+  bottom: 0;
+  width: 100%;
+}
+
+.gradient-box {
+  bottom: 20px;
+  position: absolute;
+  width: 100%;
+  height: 20px;
+  background-image: linear-gradient( to top, white 20%, transparent);
+}
+
+.textbox-expansion-button-button-wrapper {
   display: flex;
-  flex-direction: column;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
   justify-content: center;
   align-items: center;
-  border: 2px solid gray;
-  padding: 5px;
-  cursor: pointer;
-  width: 100px; /* Fixed width for consistent sizing */
-  height: 100px; /* Fixed height for consistent sizing */
+  background-color: white;
 }
 
-.first-image {
-  border-color: orange; /* First image with different border color */
+.textbox-expansion-button:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.textbox-expansion-button {
+  color: var(--primary);
+  font-weight: bold;
+  height: 20px;
+  border: 0 solid transparent;
+  background-color: white;
+}
+
+.is-expanded {
+  height: fit-content;
+}
+
+.is-collapsed {
+  overflow: hidden;
+  height: 200px;
+}
+
+.sub-choice-row {
+  align-items: center;
+  display: flex;
+  gap: 5px;
 }
 
 .sub-image {
-  width: 80px;
-  height: 80px;
+  margin: 1px;
+  width: 40px;
+  height: 40px;
   object-fit: contain;
 }
 
-.sub-image-container:hover {
-  border-color: orange; /* Border color on hover */
+.choice-button-storage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid gray;
+  cursor: pointer;
+  width: 90px;
+  border-radius: 10px;
+}
+
+.choice-button-storage-content {
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.choice-button-storage-title {
+  text-align: center;
+  width: 100%;
+  background-color: var(--background-light);
+  font-size: 14px;
+  font-weight: bold;
+  background-clip: border-box;
+  border-radius: 10px 10px 0 0;
+}
+
+.choice-button-storage-price {
+  font-size: 14px;
+}
+
+.choice-button-storage:hover,
+.choice-button-color:hover {
+  border-color: var(--secondary);
+}
+.choice-button-color {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid gray;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  font-size: 15px;
+  padding: 5px;
+}
+
+.active-choice-button {
+  border: 2px solid var(--secondary)
+}
+
+.storage-title {
+  margin: 0;
+  padding: 10px;
 }
 
 .sub-storage {
@@ -69,57 +247,73 @@
 }
 
 .sub-storage-container:hover {
-  border-color: orange; /* Border color on hover */
+  border-color: var(--secondary); /* Border color on hover */
 }
 
-.rating-container {
-  display: flex; /* Arrange items in a row */
-  align-items: center; /* Vertically center the rating and text */
-  gap: 10px; /* Add some space between the stars and text */
+.description-title {
+  font-weight: bold;
+}
+
+.description-list-container {
+  font-size: 14px;
+  padding-bottom: 10px;
 }
 
 .star-rating-text {
+  font-weight: bold;
   font-size: 14px;
-  margin-left: 8px; /* Adjust this value for proper spacing */
+  margin: 0 0 0 8px;
+}
+
+.item-price-button-box {
+  align-items: center;
+  justify-content: center;
 }
 
 .price-row {
-  display: flex;
-  justify-content: space-between;
   width: 100%;
-  margin: 10px 0; /* Space between the price row and the button */
+  margin: 20px 0; /* Space between the price row and the button */
 }
 
-.canceled-price {
-  text-decoration: line-through; /* Style for canceled price */
-  color: grey; /* Color for canceled price */
-  font-weight: bold;
-  font-size: 24px;
-}
-
-.reduced-price-item {
-  color: red; /* Color for reduced price */
-  font-weight: bold;
-  font-size: 24px;
-}
-
-.add-to-cart-button-item {
-  display: flex; /* Use flexbox to align items */
-  align-items: center; /* Center items vertically */
-  justify-content: center; /* Center content */
-  padding: 10px 15px;
-  background-color: orange; /* Green background */
-  color: black; /* White text color */
+.item-add-to-cart-button {
+  box-shadow: 0 2px 0 rgba(5, 145, 255, 0.1);
+  display: flex; 
+  align-items: center; 
+  justify-content: center;
+  padding: 0px;
+  background-color: var(--secondary); 
+  color: black; 
   border: none;
-  border-radius: 5px;
+  border-radius: 18px;
   cursor: pointer;
   font-size: 20px;
-  width: 100%;
-  height: 9%;
+  width: 180px;
+  height: 36px;
+  text-wrap: nowrap;
+  transition: background-color 0.25s linear;
 }
-.cart-icon {
-  margin-right: 8px; /* Space between icon and text */
+.item-add-to-cart-button-text {
+  padding: 0 15px;
+  font-size: 18px;
+  font-weight: bold;
 }
+
+.item-add-to-cart-button:hover {
+  background-color: #1677ff; 
+  color: #fff; 
+}
+
+.item-add-to-cart-button-cart-icon {
+  padding-left: 15px;
+}
+
+/*##### END ############
+  item immages and details 
+########################*/
+
+/*##### START ######
+  Review styles
+##################*/
 
 .reviews-section {
   margin-top: 30px;
@@ -180,3 +374,6 @@
   font-size: 16px;
   color: #555;
 }
+/*##### END ######
+  Review styles
+################*/

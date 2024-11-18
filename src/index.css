@@ -1,5 +1,9 @@
 @import url("./css/Theme.css");
 
+* {
+  box-sizing: border-box;
+}
+
 /* Ensure the footer sticks to the bottom */
 html,
 body {
@@ -9,6 +13,25 @@ body {
   display: flex;
   flex-direction: column;
   background-color: var(--background-light);
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.divider-2 {
+  border-bottom: 2px solid var(--background-dark);
+  width: 100%;
+}
+
+.divider-1 {
+  border-bottom: 1px solid var(--background-dark);
+  width: 100%;
+}
+
+.material-symbols-outlined {
+  font-size: 36px;
 }
 
 #root {

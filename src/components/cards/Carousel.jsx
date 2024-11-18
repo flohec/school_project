@@ -15,7 +15,9 @@ const CarouselCard = () => {
   return (
     <div className="carousel-container">
       <button className="nav-button left" onClick={onPrev}>
-        &lt;
+          <span className="material-symbols-outlined">
+            chevron_left
+          </span>
       </button>
       <div className="image-container-2">
         <img
@@ -25,7 +27,9 @@ const CarouselCard = () => {
         />
       </div>
       <button className="nav-button right" onClick={onNext}>
-        &gt;
+        <span className="material-symbols-outlined">
+          chevron_right
+        </span>
       </button>
 
       {/* Dot indicators */}

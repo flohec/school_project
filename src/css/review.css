@@ -11,7 +11,7 @@
 }
 
 .add-review-button {
-  background-color: orange !important;
+  background-color: var(--secondary) !important;
   color: black !important;
   border-radius: 4px;
   padding: 5px 15px;

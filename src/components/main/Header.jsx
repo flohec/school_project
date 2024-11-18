@@ -107,46 +107,45 @@ function AppHeader({ sCount, cCount, data = [], loginDefault = true }) {
     window.location.href = "/item/" + title;
   };
 
-  const menu = (
-    <Menu>
-      {login ? (
-        <>
-          <Menu.Item
-            key="1"
-            icon={<ProfileOutlined />}
-            onClick={() => (window.location.href = "/my-profile")}
-          >
-            My Profile
-          </Menu.Item>
-          <Menu.Item
-            key="2"
-            icon={<OrderedListOutlined />}
-            onClick={() => (window.location.href = "/orders")}
-          >
-            My Orders
-          </Menu.Item>
-          <Menu.Item
-            key="3"
-            icon={<SettingOutlined />}
-            onClick={() => (window.location.href = "/settings")}
-          >
-            Settings
-          </Menu.Item>
-          <Menu.Item
-            key="4"
-            icon={<LogoutOutlined />}
-            onClick={handleLoginLogout}
-          >
-            Logout
-          </Menu.Item>
-        </>
-      ) : (
-        <Menu.Item key="4" icon={<LoginOutlined />} onClick={handleLoginLogout}>
-          Login
-        </Menu.Item>
-      )}
-    </Menu>
+  const menuItems = login ? (
+    <>
+      <Menu.Item
+        key="1"
+        icon={<ProfileOutlined />}
+        onClick={() => (window.location.href = "/my-profile")}
+      >
+        My Profile
+      </Menu.Item>
+      <Menu.Item
+        key="2"
+        icon={<OrderedListOutlined />}
+        onClick={() => (window.location.href = "/orders")}
+      >
+        My Orders
+      </Menu.Item>
+      <Menu.Item
+        key="3"
+        icon={<SettingOutlined />}
+        onClick={() => (window.location.href = "/settings")}
+      >
+        Settings
+      </Menu.Item>
+      <Menu.Item
+        key="4"
+        icon={<LogoutOutlined />}
+        onClick={handleLoginLogout}
+      >
+        Logout
+      </Menu.Item>
+    </>
+  ) : (
+    <Menu.Item key="4" icon={<LoginOutlined />} onClick={handleLoginLogout}>
+      Login
+    </Menu.Item>
   );
+  
+  const menu = <Menu>{menuItems}</Menu>;
+  
 
   return (
     <Header className="app-header">
@@ -229,7 +228,7 @@ function AppHeader({ sCount, cCount, data = [], loginDefault = true }) {
         title="Menu"
         placement="left"
         onClose={closeDrawer}
-        visible={visible}
+        open={visible}
         className="app-drawer"
       >
         <p>Content goes here</p>
@@ -237,7 +236,7 @@ function AppHeader({ sCount, cCount, data = [], loginDefault = true }) {
 
         <Modal
           title="Login"
-          visible={isModalVisible}
+          open={isModalVisible}
           onOk={handleLogin}
           onCancel={handleCancel}
           okText="Login"

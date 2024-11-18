@@ -3,7 +3,6 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "../../css/CardContainer.css";
 import Card from "./Card.jsx";
-import { RightOutlined, LeftOutlined } from "@ant-design/icons";
 
 function CardContainer({ title, data, sCount, cCount }) {
   const itemsPerPage = 5;
@@ -36,7 +35,9 @@ function CardContainer({ title, data, sCount, cCount }) {
           disabled={currentPage === 1}
           className="pagination-button"
         >
-          <LeftOutlined />
+          <span className="material-symbols-outlined">
+            chevron_left
+          </span>
         </button>
         <div className="card-list">
           {selectedCards.map((card, index) => (
@@ -50,7 +51,9 @@ function CardContainer({ title, data, sCount, cCount }) {
           disabled={currentPage === totalPages}
           className="pagination-button"
         >
-          <RightOutlined />
+          <span className="material-symbols-outlined">
+            chevron_right
+          </span>
         </button>
       </div>
       <div className="dot-container">

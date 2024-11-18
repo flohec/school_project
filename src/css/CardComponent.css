@@ -26,13 +26,6 @@
   font-weight: bold;
 }
 
-.shopping-button:hover,
-.shopping-button:focus {
-  background: linear-gradient(135deg, #0056b3 0%, #003d7a 100%);
-  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
-  transform: translateY(-2px);
-}
-
 .image-container {
   width: 300px;
   height: 300px;
