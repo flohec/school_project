@@ -3,7 +3,6 @@ import CarouselCard from "../components/cards/Carousel";
 import Footer from "../components/main/Footer";
 import Header from "../components/main/Header";
 import "../css/Home.css";
-import { RightOutlined, LeftOutlined } from "@ant-design/icons";
 
 function Home({ sCount, cCount, data }) {
   return (
