@@ -46,14 +46,14 @@ function ShoppingCartCard() {
   const [activeTab, setActiveTab] = useState(1);
   const [cartItems, setCartItems] = useState(items);
   const [billingInfo, setBillingInfo] = useState({
-    firstName: "",
-    name: "",
-    email: "",
-    street: "",
-    country: "",
+    firstName: "Marc",
+    name: "Miller",
+    email: "marc-miller@gmail.com",
+    street: "Copingham Street 12",
+    country: "United States",
     phone: "",
-    city: "",
-    zip: "",
+    city: "Boston",
+    zip: "45378",
   });
   const [activeItems, setActiveItems] = useState([true, true, true]);
   const [quantity, setQuantity] = useState([1, 1, 1]);
